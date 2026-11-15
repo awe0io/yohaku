@@ -36,7 +36,7 @@ export const NoteTopicDetail: FC<{ topic: TopicModel }> = (props) => {
           page: 1,
           size: 1,
           sortBy: 'createdAt',
-          sortOrder: -1,
+          sortOrder: 'desc',
           lang: locale,
         },
       }),

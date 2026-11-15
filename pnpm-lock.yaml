@@ -532,8 +532,8 @@ importers:
         specifier: 0.53.0
         version: 0.53.0
       '@mx-space/api-client':
-        specifier: 5.13.0
-        version: 5.13.0
+        specifier: 6.0.0
+        version: 6.0.0
       '@mx-space/editor':
         specifier: 0.3.0
         version: 0.3.0
@@ -3577,9 +3577,9 @@ packages:
   '@mermaid-js/parser@1.2.0':
     resolution: {integrity: sha512-oYPyv8A4As1yH5Bx+04iQEQxXuIQDe0GKCNSRgao6z8AM9jixXIfP0vsppRLvGf+nKIOb9/LdpWA4YuJiVvESA==}
 
-  '@mx-space/api-client@5.13.0':
-    resolution: {integrity: sha512-bjFLQyocEqgXXS2iRrIbG78GfV1BNWbCz1jn+LyD7iZBQmUpuW0mTxIyTkQZwltBii3Ylv2AvReahtNcQ9RzfQ==}
-    engines: {node: '>=22'}
+  '@mx-space/api-client@6.0.0':
+    resolution: {integrity: sha512-RPmPqNsxaYJovVtatGEclauTYX3jijwPO3duCaD5altmO4zuUvzDw9kK7e0sy9K42mfFd9KM0c+FczliovuIMg==}
+    engines: {node: '>=26.0.0'}
 
   '@mx-space/editor@0.3.0':
     resolution: {integrity: sha512-HYg2v70wO0zh4f+zwL6YbYFUTydaFxMITR/OVJtxbSqAzI0I0sz/H2F55hn05r1P9DBH0BYhKWzxr/8ZN1j4XQ==}
@@ -12217,7 +12217,7 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@mx-space/api-client@5.13.0': {}
+  '@mx-space/api-client@6.0.0': {}
 
   '@mx-space/editor@0.3.0':
     dependencies:

@@ -42,7 +42,7 @@ export const NoteTopicInfo = memo(() => {
           page: 1,
           size: 6,
           sortBy: 'createdAt',
-          sortOrder: -1,
+          sortOrder: 'desc',
           lang: locale,
         },
       }),

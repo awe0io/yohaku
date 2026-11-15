@@ -41,7 +41,7 @@
     "@lexical/react": "^0.53.0",
     "@lexical/rich-text": "^0.53.0",
     "@lexical/table": "^0.53.0",
-    "@mx-space/api-client": "5.13.0",
+    "@mx-space/api-client": "6.0.0",
     "@mx-space/editor": "0.3.0",
     "@mx-space/ws-client": "^0.2.0",
     "@openpanel/web": "^1.4.4",

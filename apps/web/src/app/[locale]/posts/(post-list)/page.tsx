@@ -76,7 +76,7 @@ export default definePrerenderPage<Props>()({
         page: pageNumber,
         size: currentSize,
         sortBy,
-        sortOrder: orderBy === 'desc' ? -1 : 1,
+        sortOrder: orderBy === 'desc' ? 'desc' : 'asc',
         truncate: 150,
         lang: locale,
         excludeAiWritten: filter === 'no-ai' ? true : undefined,

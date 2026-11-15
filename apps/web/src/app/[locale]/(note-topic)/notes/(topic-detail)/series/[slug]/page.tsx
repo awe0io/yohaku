@@ -55,7 +55,7 @@ export default function Page() {
   if (!topic) throw new Error('topic data is lost :(')
 
   const [sortAsc, setSortAsc] = useState(true)
-  const sortOrder = sortAsc ? 1 : -1
+  const sortOrder = sortAsc ? 'asc' : 'desc'
 
   const {
     data: notes,
