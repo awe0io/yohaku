@@ -6,7 +6,7 @@ import { layoutElements } from '../layout'
 import { PAGE_PROFILES } from '../page-state'
 import { eggBridge } from './bridge'
 import { KEEP_ATTR } from './capture'
-import { preservePageState, swallowExitKey } from './dom'
+import { keepScroll, rememberFocus, swallowExitKey } from './dom'
 import { bodyHost, fadeFloating } from './float'
 import { createLive } from './gl/live'
 import type { GhostSource } from './images'
@@ -85,6 +85,7 @@ const makeLayer = (label: string) => {
 }
 
 export interface EggSession {
+  addGhosts: (sources: GhostSource[]) => void
   end: () => void
   paint: () => void
   setLabel: (label: string) => void
@@ -97,8 +98,12 @@ export const startSession = (input: SessionInput): EggSession | null => {
   if (!target || !paper) return null
   const { dark, term, exitLabel } = input.env()
   const scale = inkScale(input.dpr)
-  const box = root.getBoundingClientRect()
-  const rect = sourceRect(box.top, box.height, { width: W, height: H }, scale)
+  const viewport = { width: W, height: H }
+  const slice = () => {
+    const box = root.getBoundingClientRect()
+    return sourceRect(box.top, box.height, viewport, scale)
+  }
+  let rect = slice()
   const { layer, exit } = makeLayer(exitLabel)
   const created = createLive({
     canvas,
@@ -134,8 +139,9 @@ export const startSession = (input: SessionInput): EggSession | null => {
     layer.remove()
     return null
   }
-  const restorePage = preservePageState(window, document)
+  const restoreFocus = rememberFocus(document)
   const ghosts = ghostImages(layer, input.ghosts)
+  ghosts.setShift(-rect.sy)
   const floats = fadeFloating(
     bodyHost(),
     (el) =>
@@ -146,10 +152,13 @@ export const startSession = (input: SessionInput): EggSession | null => {
 
   let raf = 0
   let last = performance.now()
+  let paperAt = 0
   let frameIndex = 0
   let prev: { x: number; y: number } | null = null
   let ended = false
   let seeded = false
+  let followed = false
+  let repainted = false
 
   const leave = () => {
     if (leaveEgg(state)) effect.exit()
@@ -159,7 +168,8 @@ export const startSession = (input: SessionInput): EggSession | null => {
     if (ended) return
     ended = true
     cancelAnimationFrame(raf)
-    window.removeEventListener('wheel', onWheel, true)
+    window.removeEventListener('wheel', leave, true)
+    window.removeEventListener('scroll', leave)
     window.removeEventListener('keydown', onKey, true)
     window.removeEventListener('resize', end)
     document.removeEventListener('visibilitychange', onVisibility)
@@ -171,15 +181,17 @@ export const startSession = (input: SessionInput): EggSession | null => {
     }
     release()
     resetEgg(state)
-    root.exit()
+    keepScroll(window, () => root.exit())
     ghosts.remove()
     layer.remove()
     floats.restore()
-    restorePage()
+    restoreFocus()
     input.onEnd()
   }
 
-  const feedPaper = () => {
+  const feedPaper = (now: number) => {
+    if (now - paperAt < FRAME_MS - 2) return
+    paperAt = now
     if (frameIndex % MASK_EVERY === 0) {
       paper.render('flat')
       live.upload(paper.canvas, live.paperFlatTex, false)
@@ -189,6 +201,24 @@ export const startSession = (input: SessionInput): EggSession | null => {
     paper.render('full')
     live.upload(paper.canvas, live.paperTex, false)
     frameIndex++
+  }
+
+  const drawInk = () => {
+    const gl = live.gl as ElementGL
+    gl.bindTexture(gl.TEXTURE_2D, live.inkTex)
+    gl.texElementSubImage2D(gl.TEXTURE_2D, 0, 0, 0, target, rect)
+  }
+
+  const followPage = () => {
+    const next = slice()
+    const moved = next.sy !== rect.sy || next.sheight !== rect.sheight
+    if (!moved && !(followed && repainted)) return false
+    rect = next
+    followed = true
+    repainted = false
+    drawInk()
+    ghosts.setShift(-rect.sy)
+    return true
   }
 
   const forward = (kind: PointerInput['kind'], e: PointerEvent) => {
@@ -213,10 +243,6 @@ export const startSession = (input: SessionInput): EggSession | null => {
     prev = null
     forward('leave', e)
   }
-  const onWheel = (e: WheelEvent) => {
-    e.preventDefault()
-    leave()
-  }
   const onKey = (e: KeyboardEvent) => swallowExitKey(e, leave)
   const onVisibility = () => {
     if (document.visibilityState !== 'visible') end()
@@ -227,18 +253,19 @@ export const startSession = (input: SessionInput): EggSession | null => {
   layer.addEventListener('pointerleave', onLeave)
   exit.addEventListener('click', leave)
   canvas.addEventListener('webglcontextlost', end)
-  window.addEventListener('wheel', onWheel, { capture: true, passive: false })
+  window.addEventListener('wheel', leave, { capture: true, passive: true })
+  window.addEventListener('scroll', leave, { passive: true })
   window.addEventListener('keydown', onKey, true)
   window.addEventListener('resize', end)
   document.addEventListener('visibilitychange', onVisibility)
 
-  const step = (dt: number) => {
+  const step = (dt: number, now: number) => {
     stepEggPhase(state, dt)
     if (eggBridge.lost || !eggBridge.paper) {
       end()
       return
     }
-    feedPaper()
+    feedPaper(now)
     live.time += dt
     effect.frame(dt, live.time)
     ghosts.setFade(pageLayerVisibility(state))
@@ -248,11 +275,12 @@ export const startSession = (input: SessionInput): EggSession | null => {
 
   const frame = (now: number) => {
     raf = requestAnimationFrame(frame)
-    if (now - last < FRAME_MS - 2) return
-    const dt = Math.min(0.08, (now - last) / 1000)
-    last = now
     try {
-      step(dt)
+      // A scrolling page redraws at display rate; the 30fps cap holds otherwise.
+      if (!followPage() && now - last < FRAME_MS - 2) return
+      const dt = Math.min(0.08, (now - last) / 1000)
+      last = now
+      step(dt, now)
     } catch (error) {
       console.error(error)
       end()
@@ -260,13 +288,15 @@ export const startSession = (input: SessionInput): EggSession | null => {
   }
 
   const paint = () => {
-    if (seeded || ended) return
+    if (ended) return
+    if (seeded) {
+      repainted = true
+      return
+    }
     seeded = true
     try {
-      const gl = live.gl as ElementGL
-      gl.bindTexture(gl.TEXTURE_2D, live.inkTex)
-      gl.texElementSubImage2D(gl.TEXTURE_2D, 0, 0, 0, target, rect)
-      step(0)
+      drawInk()
+      step(0, performance.now())
     } catch (error) {
       console.error(error)
       end()
@@ -277,6 +307,7 @@ export const startSession = (input: SessionInput): EggSession | null => {
   }
 
   return {
+    addGhosts: ghosts.add,
     end,
     paint,
     setLabel: (label: string) => {

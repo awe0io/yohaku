@@ -1,21 +1,37 @@
 import { describe, expect, it, vi } from 'vitest'
 
-import { isFocusBusy, preservePageState, swallowExitKey } from './dom'
+import { isFocusBusy, keepScroll, rememberFocus, swallowExitKey } from './dom'
 
 vi.mock('~/components/layout/bgm/engine', () => ({
   bgmEngine: { getState: () => ({ enabled: false }) },
 }))
 
 describe('page state around the egg', () => {
-  it('puts scroll and focus back on restore', () => {
+  it('leaves the page where the reader scrolled it while the egg faded', () => {
     const scrollTo = vi.fn()
+    const win = { scrollX: 0, scrollY: 1400, scrollTo }
+    const swap = vi.fn()
+    keepScroll(win, swap)
+    expect(swap).toHaveBeenCalledTimes(1)
+    expect(scrollTo).not.toHaveBeenCalled()
+  })
+
+  it('undoes a jump caused by handing the page back to the document', () => {
+    const scrollTo = vi.fn()
+    const win = { scrollX: 0, scrollY: 1400, scrollTo }
+    keepScroll(win, () => {
+      win.scrollY = 0
+    })
+    expect(scrollTo).toHaveBeenCalledWith(0, 1400)
+  })
+
+  it('gives focus back without scrolling to it', () => {
     const focus = vi.fn()
-    const win = { scrollX: 0, scrollY: 600, scrollTo }
-    const doc = { activeElement: { focus } as unknown as Element }
-    const restore = preservePageState(win, doc)
-    win.scrollY = 1400
+    const restore = rememberFocus({
+      activeElement: { focus } as unknown as Element,
+    })
+    expect(focus).not.toHaveBeenCalled()
     restore()
-    expect(scrollTo).toHaveBeenCalledWith(0, 600)
     expect(focus).toHaveBeenCalledWith({ preventScroll: true })
   })
 

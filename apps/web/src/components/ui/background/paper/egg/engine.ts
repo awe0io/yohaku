@@ -72,14 +72,14 @@ export const createEggEngine = (initial: EggEnv) => {
     const { width, height } = viewportSize()
     const dpr = Math.min(2, window.devicePixelRatio || 1)
     const page = root.firstElementChild
-    if (page)
-      await upgradeToCors(viewportImages(page), location.origin, probeCors)
+    const near = page ? viewportImages(page) : []
+    await upgradeToCors(near, location.origin, probeCors)
     if (disposed || clock.last !== startedAt) {
       starting = false
       pokeIdle(clock, performance.now())
       return
     }
-    const ghosts = page ? collectGhostSources(page) : []
+    const ghosts = page ? collectGhostSources(page, near) : []
     const canvas = await root.enter(() => session?.paint())
     starting = false
     if (!canvas || disposed || clock.last !== startedAt) {
@@ -110,6 +110,15 @@ export const createEggEngine = (initial: EggEnv) => {
     ;(
       canvas as HTMLCanvasElement & { requestPaint?: () => void }
     ).requestPaint?.()
+    if (!page) return
+    // Off-screen images join the ink in the background, so a scroll exit finds them drawn.
+    const started = session
+    const shown = new Set(near)
+    const far = [...page.querySelectorAll('img')].filter(
+      (img) => !shown.has(img),
+    )
+    await upgradeToCors(far, location.origin, probeCors)
+    if (session === started) started.addGhosts(collectGhostSources(page, far))
   }
 
   const check = () => {

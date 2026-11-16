@@ -30,20 +30,23 @@ export const swallowExitKey = (
   leave()
 }
 
-export const preservePageState = (
+export const keepScroll = (
   win: {
     scrollTo: (x: number, y: number) => void
     scrollX: number
     scrollY: number
   },
-  doc: { activeElement: Element | null },
+  swap: () => void,
 ) => {
   const { scrollX, scrollY } = win
-  const active = doc.activeElement as HTMLElement | null
-  return () => {
+  swap()
+  if (win.scrollX !== scrollX || win.scrollY !== scrollY)
     win.scrollTo(scrollX, scrollY)
-    active?.focus?.({ preventScroll: true })
-  }
+}
+
+export const rememberFocus = (doc: { activeElement: Element | null }) => {
+  const active = doc.activeElement as HTMLElement | null
+  return () => active?.focus?.({ preventScroll: true })
 }
 
 export const isMediaPlaying = () =>

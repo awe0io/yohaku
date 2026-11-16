@@ -128,9 +128,11 @@ export interface GhostSource {
 }
 
 export interface ImageGhosts {
-  count: number
+  add: (sources: GhostSource[]) => void
+  readonly count: number
   remove: () => void
   setFade: (visible: number) => void
+  setShift: (dy: number) => void
 }
 
 export const viewportImages = (scope: Element) =>
@@ -138,18 +140,22 @@ export const viewportImages = (scope: Element) =>
     inViewport(img.getBoundingClientRect()),
   )
 
-export const collectGhostSources = (scope: Element): GhostSource[] =>
-  [...scope.querySelectorAll('img')]
+export const collectGhostSources = (
+  scope: Element,
+  images: HTMLImageElement[],
+): GhostSource[] => {
+  const page = scope.getBoundingClientRect()
+  return images
     .filter((img) => isUndrawableImage(img, location.origin))
     .map((img) => ({ img, rect: img.getBoundingClientRect() }))
-    .filter(({ rect }) => inViewport(rect))
+    .filter(({ rect }) => rect.width > 0 && rect.height > 0)
     .map(({ img, rect }) => {
       const cs = getComputedStyle(img)
       return {
         img,
         rect: {
-          left: rect.left,
-          top: rect.top,
+          left: rect.left - page.left,
+          top: rect.top - page.top,
           width: rect.width,
           height: rect.height,
         },
@@ -158,31 +164,50 @@ export const collectGhostSources = (scope: Element): GhostSource[] =>
         clip: clipOf(clipChain(img, scope)),
       }
     })
+}
 
 export const ghostImages = (
   layer: HTMLElement,
   sources: GhostSource[],
 ): ImageGhosts => {
-  const ghosts = sources.map(({ img, rect, ...look }) => {
-    const ghost = img.cloneNode() as HTMLImageElement
-    ghost.removeAttribute('id')
-    ghost.removeAttribute('loading')
-    ghost.style.cssText = `position:absolute;margin:0;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;object-fit:${look.objectFit};object-position:${look.objectPosition};${look.clip}pointer-events:none;`
-    layer.prepend(ghost)
-    return ghost
-  })
-  let last = -1
+  const ghosts: HTMLImageElement[] = []
+  let fade = 1
+  let shift = 0
+  const apply = (list: HTMLImageElement[]) => {
+    for (const g of list) {
+      g.style.opacity = String(fade)
+      g.style.translate = `0 ${(1 - fade) * 6 + shift}px`
+      g.style.scale = String(1 - (1 - fade) * 0.015)
+    }
+  }
+  const add = (list: GhostSource[]) => {
+    const added = list.map(({ img, rect, ...look }) => {
+      const ghost = img.cloneNode() as HTMLImageElement
+      ghost.removeAttribute('id')
+      ghost.removeAttribute('loading')
+      ghost.style.cssText = `position:absolute;margin:0;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;object-fit:${look.objectFit};object-position:${look.objectPosition};${look.clip}pointer-events:none;`
+      layer.prepend(ghost)
+      return ghost
+    })
+    apply(added)
+    ghosts.push(...added)
+  }
+  add(sources)
   return {
-    count: ghosts.length,
+    add,
+    get count() {
+      return ghosts.length
+    },
     setFade: (visible) => {
       const v = Math.round(visible * 100) / 100
-      if (v === last) return
-      last = v
-      for (const g of ghosts) {
-        g.style.opacity = String(v)
-        g.style.translate = `0 ${(1 - v) * 6}px`
-        g.style.scale = String(1 - (1 - v) * 0.015)
-      }
+      if (v === fade) return
+      fade = v
+      apply(ghosts)
+    },
+    setShift: (dy) => {
+      if (dy === shift) return
+      shift = dy
+      apply(ghosts)
     },
     remove: () => ghosts.forEach((g) => g.remove()),
   }

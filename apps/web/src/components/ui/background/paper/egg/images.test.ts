@@ -62,6 +62,55 @@ describe('ghostImages', () => {
     ghosts.remove()
     expect(ghost.remove).toHaveBeenCalled()
   })
+
+  it('carries the ghosts along when the page scrolls under the egg', () => {
+    const ghost = {
+      style: {} as Record<string, string>,
+      removeAttribute: vi.fn(),
+      remove: vi.fn(),
+    }
+    const ghosts = ghostImages({ prepend: vi.fn() } as never, [
+      {
+        img: { cloneNode: () => ghost } as never,
+        rect: { left: 120, top: 340, width: 600, height: 338 },
+        objectFit: 'cover',
+        objectPosition: '50% 50%',
+        clip: '',
+      },
+    ])
+    ghosts.setFade(1)
+    ghosts.setShift(-300)
+    expect(ghost.style.translate).toBe('0 -300px')
+    ghosts.setFade(0)
+    expect(ghost.style.translate).toBe('0 -294px')
+    expect(ghost.style.opacity).toBe('0')
+  })
+
+  it('gives a ghost adopted mid-egg the fade and offset already in effect', () => {
+    const ghost = {
+      style: {} as Record<string, string>,
+      removeAttribute: vi.fn(),
+      remove: vi.fn(),
+    }
+    const layer = { prepend: vi.fn() }
+    const ghosts = ghostImages(layer as never, [])
+    ghosts.setFade(0.5)
+    ghosts.setShift(-700)
+    ghosts.add([
+      {
+        img: { cloneNode: () => ghost } as never,
+        rect: { left: 120, top: 2363, width: 600, height: 338 },
+        objectFit: 'cover',
+        objectPosition: '50% 50%',
+        clip: '',
+      },
+    ])
+    expect(layer.prepend).toHaveBeenCalledWith(ghost)
+    expect(ghost.style.opacity).toBe('0.5')
+    expect(ghost.style.translate).toBe('0 -697px')
+    ghosts.remove()
+    expect(ghost.remove).toHaveBeenCalled()
+  })
 })
 
 describe('clipOf', () => {
