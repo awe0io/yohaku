@@ -43,12 +43,13 @@ export default function PageBleedDevPage() {
             ambient · page bleed
           </p>
           <h1 className="text-display-36 font-medium tracking-tight text-neutral-10">
-            天头场线
+            天头水晕
           </h1>
           <p className="mt-4 max-w-prose text-copy-14 leading-[1.8] text-neutral-7">
-            六条横线被一个看不见的引力点吸起，引力点沿天头缓慢横移。开页时每条线
-            从左缘起笔向右画出，起笔时刻与时长各不相同，约 2.4s 全部到位；之后线
-            不再变化，只剩引力点在漂。形态由 seed 复算，油墨读 --color-accent。
+            源自版画「一文字ぼかし」：两层轻染水彩贴近天头顶缘浸入和纸，
+            受楮皮纤维肌理与毛细水痕调制，在导航栏下方自然化开、不干扰顶栏文字。
+            开页约 1.4s 完成浸染后彻底静止（零空转帧），形态由 seed 复算，
+            油墨读 --color-accent，桌面与移动端统一渲染。
           </p>
         </header>
 
@@ -58,7 +59,7 @@ export default function PageBleedDevPage() {
             type="button"
             onClick={() => setReplay((n) => n + 1)}
           >
-            重播划线
+            重播浸染
           </button>
           <button
             className="rounded border border-neutral-4 px-3 py-1.5 font-mono text-label-12 text-neutral-8 transition-colors hover:border-accent hover:text-accent"
@@ -97,8 +98,8 @@ export default function PageBleedDevPage() {
         </div>
 
         <p className="py-8 text-copy-13 leading-[1.9] text-neutral-7">
-          正文从这里开始。天头纹理不该抢走它的注意力——滚动时线随页面一起走，
-          离屏与后台标签页停帧，prefers-reduced-motion 直接定格在画完的稳态。
+          正文从这里开始。天头水晕不该抢走它的注意力——滚动时随页面一起走，
+          浸染完成后自动停帧，prefers-reduced-motion 直接定格在稳态。
         </p>
       </div>
     </>

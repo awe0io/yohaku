@@ -168,7 +168,7 @@ overrides:
   expo-file-system: '-'
 
 # pnpm 12.8.1 and 12.8.2 treat a cycle-collapsed peer of a patched package
-# (`expo-router@58.0.30`, no patch hash) as ERR_PNPM_INCONSISTENT_PATCH_HASH.
+# (`expo-router@58.0.32`, no patch hash) as ERR_PNPM_INCONSISTENT_PATCH_HASH.
 # The check is `body.len() > peersSuffixMaxLength`, and that id is 19 chars,
 # so 18 hashes every suffix that can contain it. Drop once pnpm includes
 # https://github.com/pnpm/pnpm/pull/16419.
@@ -176,9 +176,9 @@ peersSuffixMaxLength: 18
 
 patchedDependencies:
   '@innei/markdown-to-jsx-yet': patches/@innei__markdown-to-jsx-yet.patch
-  '@react-native-menu/menu@2.0.0': yohaku-oss/patches/@react-native-menu__menu@2.0.0.patch
-  expo-image@58.0.16: yohaku-oss/patches/expo-image@58.0.16.patch
-  expo-router@58.0.30: patches/expo-router@58.0.30.patch
+  '@react-native-menu/menu@2.2.0': yohaku-oss/patches/@react-native-menu__menu@2.2.0.patch
+  expo-image@58.0.18: yohaku-oss/patches/expo-image@58.0.18.patch
+  expo-router@58.0.32: patches/expo-router@58.0.32.patch
   react-native-enriched-markdown@1.0.2: yohaku-oss/patches/react-native-enriched-markdown@1.0.2.patch
   react-native-screens@4.30.1: yohaku-oss/patches/react-native-screens@4.30.1.patch
   slot-text@0.3.4: patches/slot-text@0.3.4.patch
