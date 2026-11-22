@@ -2,10 +2,12 @@
 
 import type { PostModel, PostResponseMeta } from '@mx-space/api-client'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import { type FC, Fragment, useMemo } from 'react'
 import RemoveMarkdown from 'remove-markdown'
 
 import { TagDetailModal } from '~/components/modules/post/fab/PostTagsFAB'
+import { MetaField } from '~/components/modules/shared/MetaField'
 import { TranslatedBadge } from '~/components/modules/translation/TranslatedBadge'
 import { useModalStack } from '~/components/ui/modal'
 import { NumberSmoothTransition } from '~/components/ui/number-transition/NumberSmoothTransition'
@@ -46,6 +48,7 @@ export const PostListItem: FC<{
     () => createTagLabeler(tagGlossaryPairsOf(meta)),
     [meta],
   )
+  const t = useTranslations('common')
   const router = useRouter()
   const { present } = useModalStack()
   const categorySlug = data.category?.slug
@@ -63,16 +66,14 @@ export const PostListItem: FC<{
   const counts = (
     <>
       {!!data.readCount && (
-        <span className="flex items-center gap-1">
-          <i className="i-mingcute-eye-2-line" />
+        <MetaField label={t('meta_label_reads')}>
           <NumberSmoothTransition>{data.readCount}</NumberSmoothTransition>
-        </span>
+        </MetaField>
       )}
       {!!data.likeCount && (
-        <span className="flex items-center gap-1">
-          <i className="i-mingcute-heart-line" />
+        <MetaField label={t('meta_label_likes')}>
           <NumberSmoothTransition>{data.likeCount}</NumberSmoothTransition>
-        </span>
+        </MetaField>
       )}
     </>
   )
@@ -106,9 +107,8 @@ export const PostListItem: FC<{
         </span>
         {data.category && (
           <>
-            <span className="text-neutral-4">·</span>
             <button
-              className="yohaku-link--underline whitespace-nowrap text-accent"
+              className="ml-1.5 yohaku-link--underline whitespace-nowrap text-accent"
               onClick={(e) => {
                 e.preventDefault()
                 router.push(
@@ -172,14 +172,14 @@ export const PostListItem: FC<{
           <TranslatedBadge articleTranslation={translation} />
         )}
         {hasCounts && (
-          <span className="ml-auto hidden items-center gap-2.5 text-neutral-4 sm:flex">
+          <span className="ml-auto hidden items-baseline gap-x-[1.2em] text-neutral-6 tabular-nums sm:flex">
             {counts}
           </span>
         )}
       </div>
 
       {hasCounts && (
-        <div className="mt-2 flex justify-end gap-2.5 border-t border-dashed border-border pt-2 text-label-12 text-neutral-4 sm:hidden">
+        <div className="mt-2 flex items-baseline justify-end gap-x-[1.2em] border-t border-dashed border-border pt-2 text-label-12 text-neutral-6 tabular-nums sm:hidden">
           {counts}
         </div>
       )}

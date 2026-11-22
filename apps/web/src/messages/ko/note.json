@@ -19,7 +19,7 @@
   "more_notes": "더 많은 수첩",
   "font_selector_title": "글꼴 고르기",
   "note_in_topic": "이 수첩은 다음 이야기에 모여 있어요:",
-  "topic_total_notes": "수첩 모두 {total}편",
+  "topic_label_notes": "수록",
   "topic_view_all": "전체 {total}편 보기 →",
   "topic_recent_update": "최근 수정",
   "topic_avatar_alt": "이야기 {name}의 아바타",

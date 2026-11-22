@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import {
   overlayOnPrimaryTap,
   resolveCapsuleState,
-  resolveScrollAction,
+  stepCapsuleScroll,
   toggleMenuOverlay,
 } from './mobile-capsule'
 
@@ -142,21 +142,43 @@ describe('narration', () => {
   })
 })
 
-describe('resolveScrollAction', () => {
-  it('restores near the top', () => {
-    expect(resolveScrollAction(100, 30)).toBe('restore')
+describe('stepCapsuleScroll', () => {
+  const run = (ys: number[], collapsed = false) =>
+    ys.reduce((state, y) => stepCapsuleScroll(state, y), {
+      anchorY: ys[0],
+      collapsed,
+      lastY: ys[0],
+    }).collapsed
+
+  it('stays expanded near the top', () => {
+    expect(run([0, 60, 120, 150])).toBe(false)
   })
 
-  it('collapses on downward scroll past threshold', () => {
-    expect(resolveScrollAction(400, 10)).toBe('collapse')
+  it('collapses after a sustained downward scroll', () => {
+    expect(run([400, 420, 440, 460, 480])).toBe(true)
   })
 
-  it('restores on upward scroll', () => {
-    expect(resolveScrollAction(400, -10)).toBe('restore')
+  it('ignores a short downward nudge', () => {
+    expect(run([400, 410, 420])).toBe(false)
   })
 
-  it('ignores jitter within delta', () => {
-    expect(resolveScrollAction(400, 1)).toBe('none')
-    expect(resolveScrollAction(400, -1)).toBe('none')
+  it('stays collapsed when scrolling stops', () => {
+    expect(run([400, 500, 500, 500])).toBe(true)
+  })
+
+  it('stays collapsed through momentum jitter', () => {
+    expect(run([400, 500, 496, 503, 498, 520])).toBe(true)
+  })
+
+  it('restores after a deliberate upward scroll', () => {
+    expect(run([800, 760, 720, 680], true)).toBe(false)
+  })
+
+  it('ignores a short upward nudge', () => {
+    expect(run([800, 780, 770], true)).toBe(true)
+  })
+
+  it('restores on returning near the top', () => {
+    expect(run([300, 140], true)).toBe(false)
   })
 })

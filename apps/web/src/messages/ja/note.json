@@ -19,7 +19,7 @@
   "more_notes": "他の手記",
   "font_selector_title": "書体を選ぶ",
   "note_in_topic": "この手記は次のコラムに収録されています：",
-  "topic_total_notes": "手記数：{total} 件",
+  "topic_label_notes": "収録",
   "topic_view_all": "すべての手記（{total}）→",
   "topic_recent_update": "最近更新",
   "topic_avatar_alt": "コラム {name} のアバター",

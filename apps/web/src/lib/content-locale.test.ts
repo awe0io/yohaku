@@ -53,6 +53,23 @@ describe('resolveTranslationLanguages', () => {
     })
   })
 
+  it('omits an app locale that has neither source nor translation', () => {
+    expect(
+      resolveTranslationLanguages({
+        appLocale: 'zh-TW',
+        sourceLang: 'zh-CN',
+        availableTranslations: ['ja-JP', 'en-US'],
+      }),
+    ).toEqual({
+      displayedLanguage: 'zh',
+      languages: [
+        { code: 'zh', isOriginal: true },
+        { code: 'ja', isOriginal: false },
+        { code: 'en', isOriginal: false },
+      ],
+    })
+  })
+
   it('falls back to the source locale when the app locale has no translation', () => {
     expect(
       resolveTranslationLanguages({

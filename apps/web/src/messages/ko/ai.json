@@ -1,4 +1,6 @@
 {
+  "field_label_ai": "AI",
+  "field_label_handmade": "집필",
   "preset_handmade_label": "수작업",
   "preset_handmade_option_label": "수작업 (AI 없음)",
   "preset_handmade_description": "이 글은 제가 직접 썼어요. AI는 쓰지 않았어요.",

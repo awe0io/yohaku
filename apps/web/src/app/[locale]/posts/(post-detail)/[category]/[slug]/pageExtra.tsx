@@ -155,11 +155,10 @@ export const PostMetaBarInternal: Component = ({ className }) => {
   return (
     <PostMetaBar className={className} meta={meta} tagGlossary={tagGlossary}>
       <CurrentReadingCountingMetaBarItem />
-      <AIGenBadge className="font-normal" value={meta.aiGen} />
+      <AIGenBadge value={meta.aiGen} />
       <TranslationLanguageSwitcher
         availableTranslations={meta.availableTranslations}
         sourceLang={meta.sourceLang}
-        triggerClassName="text-label-12"
       />
     </PostMetaBar>
   )

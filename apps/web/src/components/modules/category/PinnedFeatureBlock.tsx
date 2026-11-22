@@ -1,5 +1,6 @@
 import { useLocale, useTranslations } from 'next-intl'
 
+import { MetaField } from '~/components/modules/shared/MetaField'
 import { Link } from '~/i18n/navigation'
 import { routeBuilder, Routes } from '~/lib/route-builder'
 
@@ -48,15 +49,14 @@ export const PinnedFeatureBlock = ({
             {post.summary}
           </p>
         ) : null}
-        <div className="mt-2 flex items-center gap-2 text-label-12 text-neutral-10/40">
-          <span>{dateFmt}</span>
+        <div className="mt-2 flex items-baseline gap-x-[1.2em] text-label-12 text-neutral-7 tabular-nums">
+          <MetaField label={tCommon('meta_label_published')}>
+            {dateFmt}
+          </MetaField>
           {post.readCount ? (
-            <>
-              <span>·</span>
-              <span>
-                {post.readCount} {tCommon('meta_reads', { count: '' }).trim()}
-              </span>
-            </>
+            <MetaField label={tCommon('meta_label_reads')}>
+              {post.readCount.toLocaleString(locale)}
+            </MetaField>
           ) : null}
         </div>
       </Link>

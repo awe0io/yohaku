@@ -19,7 +19,7 @@
   "more_notes": "更多笔记",
   "font_selector_title": "字形选择",
   "note_in_topic": "此手记收录于专栏：",
-  "topic_total_notes": "共有手记：{total} 篇",
+  "topic_label_notes": "收录",
   "topic_view_all": "查看全部 {total} 篇 →",
   "topic_recent_update": "最近更新",
   "topic_avatar_alt": "专栏 {name} 的头像",

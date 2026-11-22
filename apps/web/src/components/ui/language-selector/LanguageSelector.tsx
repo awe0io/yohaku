@@ -25,6 +25,7 @@ interface LanguageSelectorProps {
   originalLabel?: string
   showIcon?: boolean
   triggerClassName?: string
+  variant?: 'button' | 'inline'
 }
 
 export const LanguageSelector: FC<LanguageSelectorProps> = ({
@@ -35,6 +36,7 @@ export const LanguageSelector: FC<LanguageSelectorProps> = ({
   originalLabel,
   triggerClassName,
   showIcon = true,
+  variant = 'button',
 }) => {
   const [isPending, startTransition] = useTransition()
 
@@ -43,7 +45,7 @@ export const LanguageSelector: FC<LanguageSelectorProps> = ({
     languages.find((l) => l.code === visualLanguage)?.label || visualLanguage
 
   const handleSelect = (lang: string) => {
-    if (lang === currentLanguage) return
+    if (lang === currentLanguage || lang === visualLanguage) return
     startTransition(() => {
       onLanguageChange(lang)
     })
@@ -60,15 +62,25 @@ export const LanguageSelector: FC<LanguageSelectorProps> = ({
           disabled={isPending}
           type="button"
           className={clsxm(
-            'flex items-center gap-1 rounded-md px-1.5 py-0.5 text-copy-13 transition-colors',
-            'hover:bg-neutral-2 data-[popup-open]:bg-neutral-2',
+            variant === 'inline'
+              ? 'inline-flex items-baseline gap-[0.2em] transition-colors hover:text-accent data-[popup-open]:text-accent'
+              : 'flex items-center gap-1 rounded-md px-1.5 py-0.5 text-copy-13 transition-colors hover:bg-neutral-2 data-[popup-open]:bg-neutral-2',
             isPending && 'opacity-50',
             triggerClassName,
           )}
         >
-          {showIcon && <i className="i-mingcute-translate-2-fill" />}
+          {showIcon && variant === 'button' && (
+            <i className="i-mingcute-translate-2-fill" />
+          )}
           <span>{currentLabel}</span>
-          <i className="i-mingcute-down-line text-label-12 opacity-50" />
+          <i
+            className={clsxm(
+              'i-mingcute-down-line opacity-50',
+              variant === 'inline'
+                ? 'self-center text-caption-10'
+                : 'text-label-12',
+            )}
+          />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">

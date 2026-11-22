@@ -1,4 +1,6 @@
 {
+  "field_label_ai": "AI",
+  "field_label_handmade": "执笔",
   "preset_handmade_label": "手作",
   "preset_handmade_option_label": "手作（无 AI）",
   "preset_handmade_description": "这篇我自己写的，没用 AI。",

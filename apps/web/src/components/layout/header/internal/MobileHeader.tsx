@@ -26,10 +26,10 @@ import { CapsuleTtsPanel } from './CapsuleTtsPanel'
 import { MenuIcon, MobileMenuContext } from './HeaderDrawerButton'
 import {
   type CapsuleOverlay,
-  COLLAPSE_IDLE_RESTORE_MS,
+  type CapsuleScrollState,
   overlayOnPrimaryTap,
   resolveCapsuleState,
-  resolveScrollAction,
+  stepCapsuleScroll,
   toggleMenuOverlay,
 } from './mobile-capsule'
 import {
@@ -48,37 +48,37 @@ import {
 const KEYBOARD_VIEWPORT_SHRINK_PX = 150
 const LANG_SNOOZE_SCROLL_PX = 8
 
+const expandedScrollState = (): CapsuleScrollState => ({
+  anchorY: window.scrollY,
+  collapsed: false,
+  lastY: window.scrollY,
+})
+
 const useCapsuleCollapsed = (suppress: boolean) => {
   const [collapsed, setCollapsed] = useState(false)
+  const scrollRef = useRef<CapsuleScrollState | null>(null)
+
+  const expand = useCallback(() => {
+    scrollRef.current = expandedScrollState()
+    setCollapsed(false)
+  }, [])
 
   useEffect(() => {
-    if (suppress) {
-      setCollapsed(false)
-      return
-    }
-    let lastY = window.scrollY
-    let timer = 0
+    expand()
+    if (suppress) return
     const onScroll = () => {
-      const y = window.scrollY
-      const delta = y - lastY
-      lastY = y
-      const action = resolveScrollAction(y, delta)
-      if (action === 'collapse') setCollapsed(true)
-      else if (action === 'restore') setCollapsed(false)
-      window.clearTimeout(timer)
-      timer = window.setTimeout(
-        () => setCollapsed(false),
-        COLLAPSE_IDLE_RESTORE_MS,
+      const next = stepCapsuleScroll(
+        scrollRef.current ?? expandedScrollState(),
+        window.scrollY,
       )
+      scrollRef.current = next
+      setCollapsed(next.collapsed)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.clearTimeout(timer)
-    }
-  }, [suppress])
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [suppress, expand])
 
-  return [collapsed, setCollapsed] as const
+  return [collapsed, expand] as const
 }
 
 const useKeyboardHidden = () => {
@@ -122,7 +122,7 @@ export const CapsuleHeader = ({ className }: { className?: string }) => {
 
   const { appIcons, presentation } = useMobileLiveDesk()
   const hasLive = presentation.visible
-  const [collapsed, setCollapsed] = useCapsuleCollapsed(overlay !== 'none')
+  const [collapsed, expandCapsule] = useCapsuleCollapsed(overlay !== 'none')
   const keyboardHidden = useKeyboardHidden()
   const ownerName = useAggregationSelector((data) => data.user.name) || ''
   const siteTitle = useAggregationSelector((data) => data.seo.title) || ''
@@ -395,7 +395,7 @@ export const CapsuleHeader = ({ className }: { className?: string }) => {
               aria-label={t('aria_header_drawer')}
               className="absolute inset-0 flex items-center justify-center"
               type="button"
-              onClick={() => setCollapsed(false)}
+              onClick={expandCapsule}
             >
               {isNarrating ? (
                 <span className="size-2.5 animate-[tts-pulse_1.6s_ease-out_infinite] rounded-full bg-accent" />

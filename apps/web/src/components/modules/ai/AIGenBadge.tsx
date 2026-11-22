@@ -1,25 +1,23 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import type { ComponentPropsWithRef, FC, ReactElement, ReactNode } from 'react'
 
 import { FloatPopover } from '~/components/ui/float-popover'
 import { clsxm } from '~/lib/helper'
 
+import { metaFieldLabelClassName } from '../shared/MetaField'
 import type { AiGenValue, AiGenValueOrArray } from './ai-gen'
 import { getAiGenDescription, getAiGenLabel, isAiGenPreset } from './ai-gen'
 
-const HANDMADE_ICON = 'i-mingcute-quill-pen-fill'
-const AI_ICON = 'i-mingcute-ai-fill'
-
 type TriggerProps = {
+  fieldLabel: string
   label: string
-  iconClass?: string
 } & ComponentPropsWithRef<'span'>
 
 const Trigger: FC<TriggerProps> = ({
+  fieldLabel,
   label,
-  iconClass = AI_ICON,
   className,
   ...rest
 }) => (
@@ -27,11 +25,11 @@ const Trigger: FC<TriggerProps> = ({
     data-hide-print
     {...rest}
     className={clsxm(
-      'inline-flex items-center gap-1 text-label-12 font-medium',
+      'inline-flex min-w-0 items-baseline whitespace-nowrap',
       className,
     )}
   >
-    <i className={clsxm(iconClass, 'text-copy-13')} />
+    <span className={metaFieldLabelClassName()}>{fieldLabel}</span>
     <span className="max-w-64 truncate">{label}</span>
   </span>
 )
@@ -49,15 +47,22 @@ const SingleBadge: FC<{
   const t = useTranslations('ai')
 
   if (!isAiGenPreset(value)) {
-    return <Trigger className={className} label={String(value)} />
+    return (
+      <Trigger
+        className={className}
+        fieldLabel={t('field_label_ai')}
+        label={String(value)}
+      />
+    )
   }
 
-  const iconClass = value === -1 ? HANDMADE_ICON : AI_ICON
   const trigger = (
     <Trigger
       className={className}
-      iconClass={iconClass}
       label={getAiGenLabel(t, value)}
+      fieldLabel={
+        value === -1 ? t('field_label_handmade') : t('field_label_ai')
+      }
     />
   )
   return withTooltip(trigger, getAiGenDescription(t, value))
@@ -68,6 +73,7 @@ const MultiBadge: FC<{
   className?: string
 }> = ({ values, className }) => {
   const t = useTranslations('ai')
+  const locale = useLocale()
   const items = values.map((v) => ({
     value: v,
     label: isAiGenPreset(v) ? getAiGenLabel(t, v) : String(v),
@@ -79,7 +85,11 @@ const MultiBadge: FC<{
   const trigger = (
     <Trigger
       className={className}
-      label={items.map((item) => item.label).join(' · ')}
+      fieldLabel={t('field_label_ai')}
+      label={new Intl.ListFormat(locale, {
+        style: 'long',
+        type: 'conjunction',
+      }).format(new Set(items.map((item) => item.label)))}
     />
   )
 

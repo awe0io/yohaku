@@ -19,7 +19,7 @@
   "more_notes": "More notes",
   "font_selector_title": "Choose a font",
   "note_in_topic": "This note is included in the series:",
-  "topic_total_notes": "Total notes: {total}",
+  "topic_label_notes": "Notes",
   "topic_view_all": "View all {total} notes →",
   "topic_recent_update": "Recently updated",
   "topic_avatar_alt": "Avatar of series {name}",

@@ -15,18 +15,8 @@ import { createTagLabeler, type TagGlossaryPair } from '~/lib/api/tag-glossary'
 import { clsxm } from '~/lib/helper'
 import { routeBuilder, Routes } from '~/lib/route-builder'
 
+import { MetaField } from '../shared/MetaField'
 import { TagDetailModal } from './fab/PostTagsFAB'
-
-const Dot: Component = ({ className }) => (
-  <span className={clsxm('text-neutral-5', className)}>·</span>
-)
-
-const Item: Component = ({ className, children }) => (
-  <span className={clsxm('flex items-center gap-2', className)}>
-    <Dot />
-    {children}
-  </span>
-)
 
 export const PostMetaBar: Component<{
   meta: Partial<
@@ -50,36 +40,38 @@ export const PostMetaBar: Component<{
   return (
     <div
       className={clsxm(
-        'flex min-w-0 shrink grow flex-wrap items-center gap-2 text-label-12 text-neutral-6',
+        'flex min-w-0 shrink grow flex-wrap items-baseline gap-x-[1.2em] gap-y-1 text-label-12 text-neutral-7',
         className,
       )}
     >
       {!!meta.createdAt && (
-        <span>
-          <RelativeTime date={meta.createdAt} />
-        </span>
-      )}
-
-      {meta.modifiedAt ? (
-        <Item>
-          {isClient ? (
+        <MetaField label={t('meta_label_published')}>
+          {isClient && meta.modifiedAt ? (
             <FloatPopover
               mobileAsSheet
               as="span"
-              triggerElement={t('edited')}
+              triggerElement={<RelativeTime date={meta.createdAt} />}
               type="tooltip"
             >
               {t('edited_at')} <RelativeTime date={meta.modifiedAt} />
             </FloatPopover>
           ) : (
-            <span>{t('edited')}</span>
+            <RelativeTime date={meta.createdAt} />
           )}
-        </Item>
+        </MetaField>
+      )}
+
+      {meta.modifiedAt ? (
+        <MetaField className="max-md:hidden" label={t('meta_label_revised')}>
+          <RelativeTime date={meta.modifiedAt} />
+        </MetaField>
       ) : null}
 
       {!!meta.category && (
-        <span className="order-last flex min-w-0 basis-full items-center justify-center gap-2 md:order-none md:basis-auto md:justify-start">
-          <Dot className="hidden md:inline" />
+        <MetaField
+          className="max-md:order-first max-md:basis-full max-md:justify-center"
+          label={t('meta_label_category')}
+        >
           <span className="min-w-0 truncate">
             <MotionButtonBase
               className="yohaku-link--underline font-normal text-accent"
@@ -122,25 +114,19 @@ export const PostMetaBar: Component<{
               </>
             ) : null}
           </span>
-        </span>
+        </MetaField>
       )}
 
       {!!meta.readCount && (
-        <Item>
-          <span>
-            <NumberSmoothTransition>{meta.readCount}</NumberSmoothTransition>{' '}
-            {t('meta_reads', { count: '' }).trim()}
-          </span>
-        </Item>
+        <MetaField label={t('meta_label_reads')}>
+          <NumberSmoothTransition>{meta.readCount}</NumberSmoothTransition>
+        </MetaField>
       )}
 
       {!!meta.likeCount && (
-        <Item>
-          <span>
-            <NumberSmoothTransition>{meta.likeCount}</NumberSmoothTransition>{' '}
-            {t('meta_likes', { count: '' }).trim()}
-          </span>
-        </Item>
+        <MetaField label={t('meta_label_likes')}>
+          <NumberSmoothTransition>{meta.likeCount}</NumberSmoothTransition>
+        </MetaField>
       )}
 
       {children}

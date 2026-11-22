@@ -15,6 +15,7 @@ import { useMemo, useState } from 'react'
 import { NoteTopicAvatar } from '~/components/modules/note/NoteTopicAvatar'
 import { NoteTopicMarkdownRender } from '~/components/modules/note/NoteTopicMarkdownRender'
 import { LoadMoreIndicator } from '~/components/modules/shared/LoadMoreIndicator'
+import { MetaField } from '~/components/modules/shared/MetaField'
 import { Loading } from '~/components/ui/loading'
 import { RelativeTime } from '~/components/ui/relative-time'
 import { BottomToUpSoftScaleTransitionView } from '~/components/ui/transition'
@@ -219,19 +220,15 @@ const TopicHero = ({
           )}
 
           <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 text-label-12 text-neutral-7">
-            <div className="flex items-center gap-1.5">
-              <span>{t('topic_total_notes', { total })}</span>
+            <div className="flex flex-wrap items-baseline gap-x-[1.2em] tabular-nums">
+              <MetaField label={t('topic_label_notes')}>{total}</MetaField>
               {lastUpdatedAt && (
-                <>
-                  <span className="text-neutral-7/50">·</span>
-                  <span className="inline-flex items-center gap-1">
-                    <span>{t('topic_recent_update')}</span>
-                    <RelativeTime
-                      date={lastUpdatedAt}
-                      displayAbsoluteTimeAfterDay={Infinity}
-                    />
-                  </span>
-                </>
+                <MetaField label={t('topic_recent_update')}>
+                  <RelativeTime
+                    date={lastUpdatedAt}
+                    displayAbsoluteTimeAfterDay={Infinity}
+                  />
+                </MetaField>
               )}
             </div>
             <button

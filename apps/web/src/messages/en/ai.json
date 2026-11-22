@@ -1,4 +1,6 @@
 {
+  "field_label_ai": "AI",
+  "field_label_handmade": "Craft",
   "preset_handmade_label": "Handmade",
   "preset_handmade_option_label": "Handmade (no AI)",
   "preset_handmade_description": "I wrote this myself. No AI.",

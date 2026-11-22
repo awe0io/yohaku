@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import type { FC } from 'react'
 import { useCallback, useMemo } from 'react'
 
+import { MetaField } from '~/components/modules/shared/MetaField'
 import { LanguageSelector } from '~/components/ui/language-selector'
 import { useSwitchLocale } from '~/hooks/common/use-switch-locale'
 import { isSupportedLocale } from '~/i18n/config'
@@ -31,13 +32,13 @@ function getLanguageLabel(
 
 interface TranslationLanguageSwitcherProps {
   availableTranslations?: string[]
+  className?: string
   sourceLang?: string
-  triggerClassName?: string
 }
 
 export const TranslationLanguageSwitcher: FC<
   TranslationLanguageSwitcherProps
-> = ({ availableTranslations, sourceLang, triggerClassName }) => {
+> = ({ availableTranslations, sourceLang, className }) => {
   const t = useTranslations('translation')
   const tCommon = useTranslations('common')
   const appLocale = useLocale()
@@ -72,14 +73,16 @@ export const TranslationLanguageSwitcher: FC<
 
   return (
     <span data-hide-print className="contents">
-      <LanguageSelector
-        currentLanguage={appLocale}
-        displayedLanguage={displayedLanguage}
-        languages={languages}
-        originalLabel={t('original')}
-        triggerClassName={triggerClassName}
-        onLanguageChange={handleLanguageChange}
-      />
+      <MetaField className={className} label={tCommon('meta_label_language')}>
+        <LanguageSelector
+          currentLanguage={appLocale}
+          displayedLanguage={displayedLanguage}
+          languages={languages}
+          originalLabel={t('original')}
+          variant="inline"
+          onLanguageChange={handleLanguageChange}
+        />
+      </MetaField>
     </span>
   )
 }

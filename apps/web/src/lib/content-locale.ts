@@ -36,7 +36,6 @@ export const resolveTranslationLanguages = ({
   const codes = new Set<Locale>()
   if (sourceLocale) codes.add(sourceLocale)
   translatedLocales.forEach((locale) => codes.add(locale))
-  if (isAppLocale(appLocale)) codes.add(appLocale)
 
   const displayedLanguage =
     appLocale === sourceLocale ||

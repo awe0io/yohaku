@@ -175,7 +175,7 @@ const MetaDate = withClientOnly(() => {
   )
 })
 
-const MetaContextStream = ({
+export const MetaContextStream = ({
   weather,
   mood,
 }: {
@@ -185,7 +185,7 @@ const MetaContextStream = ({
   const t = useTranslations('common')
 
   return (
-    <span className="font-serif italic text-neutral-7">
+    <span className="inline-flex flex-wrap items-baseline gap-x-[1.1em] font-serif italic text-neutral-7">
       {!!weather && (
         <FloatPopover
           asChild
@@ -200,11 +200,6 @@ const MetaContextStream = ({
         >
           {weather}
         </FloatPopover>
-      )}
-      {!!weather && !!mood && (
-        <span aria-hidden className="mx-2 opacity-50">
-          ·
-        </span>
       )}
       {!!mood && (
         <FloatPopover
@@ -233,7 +228,7 @@ type StatPart = {
   live?: boolean
 }
 
-const MetaStats = ({
+export const MetaStats = ({
   readCount,
   likeCount,
   realtime,
@@ -244,41 +239,44 @@ const MetaStats = ({
 }) => {
   const tCommon = useTranslations('common')
   const tActivity = useTranslations('activity')
+  const locale = useLocale()
 
   const parts: StatPart[] = []
   if (realtime > 0) {
-    const shortLabel = tActivity('reading_now_short', { count: '' }).trim()
     const longLabel = tActivity('reading_now').trim()
     parts.push({
       key: 'now',
       value: realtime,
-      label: shortLabel,
+      label: tCommon('meta_label_reading_now'),
       aria: `${realtime} ${longLabel}`,
       live: true,
     })
   }
   if (readCount) {
-    const label = tCommon('meta_reads', { count: '' }).trim()
+    const label = tCommon('meta_label_reads')
     parts.push({
       key: 'read',
       value: readCount,
       label,
-      aria: `${readCount.toLocaleString()} ${label}`,
+      aria: `${label} ${readCount.toLocaleString()}`,
     })
   }
   if (likeCount) {
-    const label = tCommon('meta_likes', { count: '' }).trim()
+    const label = tCommon('meta_label_likes')
     parts.push({
       key: 'like',
       value: likeCount,
       label,
-      aria: `${likeCount.toLocaleString()} ${label}`,
+      aria: `${label} ${likeCount.toLocaleString()}`,
     })
   }
 
   if (parts.length === 0) return null
 
-  const fullText = parts.map((p) => p.aria).join(' · ')
+  const fullText = new Intl.ListFormat(locale, {
+    style: 'short',
+    type: 'unit',
+  }).format(parts.map((p) => p.aria))
 
   return (
     <FloatPopover
@@ -286,14 +284,9 @@ const MetaStats = ({
       mobileAsSheet
       type="tooltip"
       triggerElement={
-        <span className="inline-flex items-baseline gap-2 text-caption-10 uppercase tracking-[0.22em] text-neutral-7 tabular-nums md:justify-self-end">
-          {parts.map((p, i) => (
+        <span className="inline-flex items-baseline gap-[1.2em] text-caption-10 uppercase tracking-[0.22em] text-neutral-7 tabular-nums md:justify-self-end">
+          {parts.map((p) => (
             <Fragment key={p.key}>
-              {i > 0 && (
-                <span aria-hidden className="opacity-50">
-                  ·
-                </span>
-              )}
               <span
                 aria-label={p.aria}
                 className={
@@ -308,8 +301,16 @@ const MetaStats = ({
                     className="size-1.5 self-center rounded-full bg-current motion-safe:[animation:dotPulse_2.4s_ease-in-out_infinite]"
                   />
                 )}
+                <span
+                  className={
+                    p.live
+                      ? 'tracking-[0.12em] opacity-80'
+                      : 'tracking-[0.12em] text-neutral-6'
+                  }
+                >
+                  {p.label}
+                </span>
                 <span>{p.value.toLocaleString()}</span>
-                <span className="opacity-80">{p.label}</span>
               </span>
             </Fragment>
           ))}
@@ -337,13 +338,12 @@ const LowerRow = () => {
     translation.availableTranslations.length > 0
 
   return (
-    <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-border pt-1.5 text-neutral-6">
+    <div className="mt-2 flex flex-wrap items-baseline gap-x-[1.2em] gap-y-1 border-t border-border pt-1.5 text-label-12 text-neutral-7">
       {hasAI && <AIGenBadge value={aiGen} />}
       {hasTranslation && (
         <TranslationLanguageSwitcher
           availableTranslations={translation.availableTranslations!}
           sourceLang={translation.sourceLang}
-          triggerClassName="text-label-12! font-medium! text-neutral-6! [&_i:first-child]:text-copy-13! px-1! py-0!"
         />
       )}
       <MetaCC />
@@ -362,7 +362,7 @@ const MetaCC = () => {
       triggerElement={
         <a
           aria-label="Creative Commons BY-NC-SA 4.0"
-          className="ml-auto inline-flex items-center text-neutral-6 transition-opacity hover:opacity-100"
+          className="ml-auto inline-flex items-center self-center text-neutral-6 transition-opacity hover:opacity-100"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
           rel="noreferrer"
           target="_blank"

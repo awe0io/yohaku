@@ -1,4 +1,6 @@
 {
+  "field_label_ai": "AI",
+  "field_label_handmade": "執筆",
   "preset_handmade_label": "手作り",
   "preset_handmade_option_label": "手作り（AI なし）",
   "preset_handmade_description": "これは自分で書きました。AI は使っていません。",

@@ -19,6 +19,7 @@ import { apiClient } from '~/lib/request'
 import { routeBuilder, Routes } from '~/lib/route-builder'
 import { useCurrentNoteDataSelector } from '~/providers/note/CurrentNoteDataProvider'
 
+import { MetaField, metaFieldLabelClassName } from '../shared/MetaField'
 import { NoteTopicAvatar } from './NoteTopicAvatar'
 import { NoteTopicMarkdownRender } from './NoteTopicMarkdownRender'
 
@@ -91,8 +92,10 @@ export const NoteTopicDetail: FC<{ topic: TopicModel }> = (props) => {
       ) : (
         <>
           {recent && (
-            <p className="flex flex-wrap items-baseline gap-x-1.5 text-label-12 leading-[1.6] text-neutral-6">
-              <span className="text-neutral-7">{t('topic_recent_update')}</span>
+            <p className="flex flex-wrap items-baseline text-label-12 leading-[1.6] text-neutral-7">
+              <span className={metaFieldLabelClassName()}>
+                {t('topic_recent_update')}
+              </span>
               <Link
                 className="min-w-0 truncate text-neutral-8 transition-colors hover:text-neutral-9"
                 href={routeBuilder(Routes.Note, {
@@ -101,15 +104,16 @@ export const NoteTopicDetail: FC<{ topic: TopicModel }> = (props) => {
               >
                 「{recent.title}」
               </Link>
-              <span className="text-neutral-5">·</span>
-              <RelativeTime
-                date={recent.modifiedAt || recent.createdAt}
-                displayAbsoluteTimeAfterDay={Infinity}
-              />
+              <span className="ml-[0.6em] text-neutral-6">
+                <RelativeTime
+                  date={recent.modifiedAt || recent.createdAt}
+                  displayAbsoluteTimeAfterDay={Infinity}
+                />
+              </span>
             </p>
           )}
-          <p className="text-label-12 leading-[1.6] text-neutral-6">
-            {t('topic_total_notes', { total })}
+          <p className="text-label-12 leading-[1.6] text-neutral-7 tabular-nums">
+            <MetaField label={t('topic_label_notes')}>{total}</MetaField>
           </p>
         </>
       )}

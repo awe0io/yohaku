@@ -8,51 +8,42 @@ import { FloatPopover } from '~/components/ui/float-popover'
 import { clsxm } from '~/lib/helper'
 
 import { useMaybeInRoomContext } from '../activity'
+import { LivePulseDot, metaFieldLabelClassName } from './MetaField'
 
 export const CurrentReadingCountingMetaBarItem: FC<{
-  leftElement?: React.ReactNode
   className?: string
-}> = ({ leftElement, className }) => {
+}> = ({ className }) => {
   const t = useTranslations('activity')
+  const tCommon = useTranslations('common')
   const roomCtx = useMaybeInRoomContext()
   const count = useCurrentRoomCount(roomCtx?.roomName || '')
 
-  if (!roomCtx) return null
+  if (!roomCtx || count <= 1) return null
 
-  const hasOthers = count > 1
   const displayLabel = `${t('current_readers')}${count}${t('reading_now')}`
 
   return (
-    <>
-      {leftElement}
-      <FloatPopover
-        asChild
-        mobileAsSheet
-        type="tooltip"
-        triggerElement={
-          <span
-            aria-label={hasOthers ? displayLabel : undefined}
-            className={clsxm(
-              'inline-flex items-center gap-1 tabular-nums transition-opacity duration-300',
-              hasOthers ? 'opacity-100' : 'opacity-40',
-              className,
-            )}
-          >
-            <i className="i-mingcute-eye-2-fill shrink-0" />
-            <span
-              aria-hidden={!hasOthers}
-              className={clsxm(
-                'inline-block min-w-[2ch] text-center transition-opacity duration-300',
-                hasOthers ? 'opacity-100' : 'opacity-0',
-              )}
-            >
-              {hasOthers ? count : 0}
-            </span>
+    <FloatPopover
+      asChild
+      mobileAsSheet
+      type="tooltip"
+      triggerElement={
+        <span
+          aria-label={displayLabel}
+          className={clsxm(
+            'inline-flex items-baseline whitespace-nowrap text-accent tabular-nums',
+            className,
+          )}
+        >
+          <LivePulseDot />
+          <span className={metaFieldLabelClassName('text-current opacity-80')}>
+            {tCommon('meta_label_reading_now')}
           </span>
-        }
-      >
-        {hasOthers ? displayLabel : t('realtime_tooltip')}
-      </FloatPopover>
-    </>
+          {count}
+        </span>
+      }
+    >
+      {displayLabel}
+    </FloatPopover>
   )
 }
