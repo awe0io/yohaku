@@ -1,13 +1,12 @@
 ## TL;DR
 
-Internal maintenance release; no user-facing changes.
+Typing in the admin snippet editor now keeps focus in the editor, including when a letter also serves as a navigation shortcut.
 
 ## Changes
 
-- Refreshed workspace dependencies to their latest patch/minor releases (NestJS 12.5.1, `@haklex/*` 0.67.0, better-auth 1.7.26, rolldown 1.3.3, vite 8.3.8, `@earendil-works/pi-*` 0.99.2).
-- Replaced ESLint with oxlint for repository linting and moved declaration builds/codegen to tsrs.
-- Removed the finished `packages/mongo-pg-cli` migration tool from the monorepo; the published `@mx-space/mongo-pg-cli` npm package remains available for v11 → v12 data migrations.
+- Page shortcuts now respect Monaco, CodeMirror, and rich-text editing. Typing `h` in a snippet keeps the caret in place, and keyboard navigation still works outside the editor. ([561a9c7](https://github.com/mx-space/core/commit/561a9c71b067ce9502fb7616ec98006b5549aa83))
+- The bundled editor uses haklex 0.67.1, which rounds the checkbox corners in Ink checklists. ([0b1c5e1](https://github.com/mx-space/core/commit/0b1c5e1bd))
 
 ---
 
-**Full Changelog**: https://github.com/mx-space/core/compare/v18.2.0...v18.2.1
+**Full Changelog**: https://github.com/mx-space/core/compare/v18.2.3...v18.2.4

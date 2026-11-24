@@ -279,23 +279,23 @@ importers:
         specifier: workspace:*
         version: link:../../yohaku-oss/packages/dom-webview
       '@haklex/rich-compose':
-        specifier: 0.65.7
-        version: 0.65.7(b36724792a22d6b27b9c1a2943785db6)
+        specifier: 0.67.1
+        version: 0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)
       '@haklex/rich-editor':
-        specifier: 0.65.7
-        version: 0.65.7(99f85382afd0739219f72a6d185c9a58)
+        specifier: 0.67.1
+        version: 0.67.1(99f85382afd0739219f72a6d185c9a58)
       '@haklex/rich-ext-chat':
-        specifier: 0.65.7
-        version: 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
+        specifier: 0.67.1
+        version: 0.67.1(fad49312bf2c7f0254c2da176aa99477)
       '@haklex/rich-ext-dynamic':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-embed':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-nested-doc':
-        specifier: 0.65.7
-        version: 0.65.7(9c5b1902ea2f783358c3db118503ee48)
+        specifier: 0.67.1
+        version: 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
       '@icons-pack/react-simple-icons':
         specifier: 13.15.1
         version: 13.15.1(react@19.3.1)
@@ -493,23 +493,23 @@ importers:
         specifier: 2.1.9
         version: 2.1.9(275a683f8a4cdca448940810a4f343e6)
       '@haklex/rich-compose':
-        specifier: 0.65.7
-        version: 0.65.7(b36724792a22d6b27b9c1a2943785db6)
+        specifier: 0.67.1
+        version: 0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)
       '@haklex/rich-editor':
-        specifier: 0.65.7
-        version: 0.65.7(99f85382afd0739219f72a6d185c9a58)
+        specifier: 0.67.1
+        version: 0.67.1(99f85382afd0739219f72a6d185c9a58)
       '@haklex/rich-ext-chat':
-        specifier: 0.65.7
-        version: 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
+        specifier: 0.67.1
+        version: 0.67.1(fad49312bf2c7f0254c2da176aa99477)
       '@haklex/rich-ext-dynamic':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-nested-doc':
-        specifier: 0.65.7
-        version: 0.65.7(9c5b1902ea2f783358c3db118503ee48)
+        specifier: 0.67.1
+        version: 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
       '@haklex/rich-ext-steps':
-        specifier: 0.65.7
-        version: 0.65.7(5f56d2cf713750ca416fcfb04ec68316)
+        specifier: 0.67.1
+        version: 0.67.1(177929180f2bf08d82196c3d41228b86)
       '@lexical/code-core':
         specifier: 0.53.0
         version: 0.53.0
@@ -927,26 +927,26 @@ importers:
         specifier: 1.9.2
         version: 1.9.2(tailwindcss@4.3.3)
       '@haklex/rich-compose':
-        specifier: 0.65.7
-        version: 0.65.7(b36724792a22d6b27b9c1a2943785db6)
+        specifier: 0.67.1
+        version: 0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)
       '@haklex/rich-editor':
-        specifier: 0.65.7
-        version: 0.65.7(99f85382afd0739219f72a6d185c9a58)
+        specifier: 0.67.1
+        version: 0.67.1(99f85382afd0739219f72a6d185c9a58)
       '@haklex/rich-ext-chat':
-        specifier: 0.65.7
-        version: 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
+        specifier: 0.67.1
+        version: 0.67.1(fad49312bf2c7f0254c2da176aa99477)
       '@haklex/rich-ext-dynamic':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-embed':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-nested-doc':
-        specifier: 0.65.7
-        version: 0.65.7(9c5b1902ea2f783358c3db118503ee48)
+        specifier: 0.67.1
+        version: 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
       '@haklex/rich-ext-steps':
-        specifier: 0.65.7
-        version: 0.65.7(5f56d2cf713750ca416fcfb04ec68316)
+        specifier: 0.67.1
+        version: 0.67.1(177929180f2bf08d82196c3d41228b86)
       '@iconify-json/material-symbols':
         specifier: 1.2.95
         version: 1.2.95
@@ -1005,23 +1005,23 @@ importers:
         specifier: workspace:*
         version: link:../../packages/dom-webview
       '@haklex/rich-compose':
-        specifier: 0.65.7
-        version: 0.65.7(b36724792a22d6b27b9c1a2943785db6)
+        specifier: 0.67.1
+        version: 0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)
       '@haklex/rich-editor':
-        specifier: 0.65.7
-        version: 0.65.7(99f85382afd0739219f72a6d185c9a58)
+        specifier: 0.67.1
+        version: 0.67.1(99f85382afd0739219f72a6d185c9a58)
       '@haklex/rich-ext-chat':
-        specifier: 0.65.7
-        version: 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
+        specifier: 0.67.1
+        version: 0.67.1(fad49312bf2c7f0254c2da176aa99477)
       '@haklex/rich-ext-dynamic':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-embed':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-nested-doc':
-        specifier: 0.65.7
-        version: 0.65.7(9c5b1902ea2f783358c3db118503ee48)
+        specifier: 0.67.1
+        version: 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
       '@icons-pack/react-simple-icons':
         specifier: 13.15.1
         version: 13.15.1(react@19.3.1)
@@ -1289,26 +1289,26 @@ importers:
         specifier: 1.9.2
         version: 1.9.2(tailwindcss@4.3.3)
       '@haklex/rich-compose':
-        specifier: 0.65.7
-        version: 0.65.7(b36724792a22d6b27b9c1a2943785db6)
+        specifier: 0.67.1
+        version: 0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)
       '@haklex/rich-editor':
-        specifier: 0.65.7
-        version: 0.65.7(99f85382afd0739219f72a6d185c9a58)
+        specifier: 0.67.1
+        version: 0.67.1(99f85382afd0739219f72a6d185c9a58)
       '@haklex/rich-ext-chat':
-        specifier: 0.65.7
-        version: 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
+        specifier: 0.67.1
+        version: 0.67.1(fad49312bf2c7f0254c2da176aa99477)
       '@haklex/rich-ext-dynamic':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-embed':
-        specifier: 0.65.7
-        version: 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+        specifier: 0.67.1
+        version: 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
       '@haklex/rich-ext-nested-doc':
-        specifier: 0.65.7
-        version: 0.65.7(9c5b1902ea2f783358c3db118503ee48)
+        specifier: 0.67.1
+        version: 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
       '@haklex/rich-ext-steps':
-        specifier: 0.65.7
-        version: 0.65.7(5f56d2cf713750ca416fcfb04ec68316)
+        specifier: 0.67.1
+        version: 0.67.1(177929180f2bf08d82196c3d41228b86)
       '@iconify-json/material-symbols':
         specifier: 1.2.95
         version: 1.2.95
@@ -2796,14 +2796,14 @@ packages:
   '@formatjs/intl-localematcher@0.8.3':
     resolution: {integrity: sha512-pHUjWb9NuhnMs8+PxQdzBtZRFJHlGhrURGAbm6Ltwl82BFajeuiIR3jblSa7ia3r62rXe/0YtVpUG3xWr5bFCA==}
 
-  '@haklex/cm-editor@0.65.7':
-    resolution: {integrity: sha512-BgH4j4lqAQ1Rg6Ma5re93vsKULFYwBXEFSR7CImuRF7aRUI/WKQXMwms5eeA+2WeisCYEBDGySFXMaztPY5BTg==}
+  '@haklex/cm-editor@0.67.1':
+    resolution: {integrity: sha512-bFXM9E2F+4+YUkktoHvEfhResmsFy5GPhZ2Ym17oeit/BP7S8W4BKyDyzn7+ExdGP3gSC1sBC+fdm9G3nryYKg==}
 
-  '@haklex/rich-compose@0.65.7':
-    resolution: {integrity: sha512-cJUs7S8TEht/PoYs33uaWoAVKEzectdPNKeIjPZhMzOwswU2Kz3xkrlM9rR84NYgraDG6zV7ilqdlE5iQq2azg==}
+  '@haklex/rich-compose@0.67.1':
+    resolution: {integrity: sha512-TBhsC8Y573CcEBip0n0BWdjYtC3YCknP/NsQVfhP1oROmyIgm2KrrLmyAhz7NEViAO4uSx0AFzdQWXTWZZ/vTg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-ext-dynamic': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-ext-dynamic': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
@@ -2813,8 +2813,8 @@ packages:
       '@haklex/rich-ext-dynamic':
         optional: true
 
-  '@haklex/rich-dynamic-protocol@0.65.7':
-    resolution: {integrity: sha512-HyWCV4IV0dnJz2ERJDnOMiCqfpgL5Kv2WEciaemoSWsJkWwWAHfQUulSqquXUG52gDMmgy0E81JZ0NP0MpAm/g==}
+  '@haklex/rich-dynamic-protocol@0.67.1':
+    resolution: {integrity: sha512-uHjLZZn7SS3oU5tTRB3UA7t49tbH2rkQJYB4qO8eyP/4zoM3/pF7A9NlNX1tFQiT1p/W9rMgM9ZhBnwiP6eItg==}
     peerDependencies:
       react: 19.3.1
       react-dom: 19.3.1
@@ -2824,8 +2824,8 @@ packages:
       react-dom:
         optional: true
 
-  '@haklex/rich-editor-ui@0.65.7':
-    resolution: {integrity: sha512-FXglB/qwxUjaMm9uqSuf8zmdvA2Nktt8uUzmLwHUSWCYH9dywj4r5ljkvzq1Gx8ikcXq5tEk3Z8LBURSP6IGpg==}
+  '@haklex/rich-editor-ui@0.67.1':
+    resolution: {integrity: sha512-vN9DJE1C7DCjEXmKfF2/p560R1wlnsL5uyRgkBkNbyJ664o+W77FTJrNmCwaDlfKuPr07oSfvSJE7flQ70VtYw==}
     peerDependencies:
       '@base-ui/react': '>=1.5.0'
       '@lexical/react': 0.53.0
@@ -2839,8 +2839,8 @@ packages:
       lexical:
         optional: true
 
-  '@haklex/rich-editor@0.65.7':
-    resolution: {integrity: sha512-vVxAeaFKE3hlv1KzmqXr2WjgLW2lVCRCwcFHsEubw2ox/JLJ8B6TYO9+jxcU77fOrlnkvXeKIPK5Z8Vy+IEPhA==}
+  '@haklex/rich-editor@0.67.1':
+    resolution: {integrity: sha512-w670yIKH9+uYor6SwbfzvrNOe339Wlzz18EazX/QzahErcRzHCw1Ci7zjEEt5edqx5OvLEV8RmnkA20w0PNzXg==}
     peerDependencies:
       '@base-ui/react': '>=1.5.0'
       '@lexical/extension': 0.53.0
@@ -2859,81 +2859,81 @@ packages:
       katex:
         optional: true
 
-  '@haklex/rich-ext-chart@0.65.7':
-    resolution: {integrity: sha512-+JEiMJwxtHYhmm8laOaphQYebjTAwOYZq9W4dIn/CkRXRMX4W4r3RCO1dT+W8Wj2jyFc8VbqJoODdD6WleyKTg==}
+  '@haklex/rich-ext-chart@0.67.1':
+    resolution: {integrity: sha512-VE9Sp+B+2Epk/ZX0aQxCagnelEQXx/qgvkY0FctF64wZ0QPb8mXn4Hf80lRF44lCfz9AniuCFh2tvkjSRqqIDA==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-ext-chat@0.65.7':
-    resolution: {integrity: sha512-WjjDGlWWnuvuuOHwB3AnNPzclYR641y6z6p7JGllTKH7luj+P6zn9EsL5Hd02eDVEGTQEo5RMf5AWwIAQOkokQ==}
+  '@haklex/rich-ext-chat@0.67.1':
+    resolution: {integrity: sha512-Gr4GKcEowShpppZocj83Y4O6vfWobiI2/kjHUH8JpbPeU/rlub9+ZrbZQeSZnqIzcUEREqH7H7wq3XY2hKEyIA==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
 
-  '@haklex/rich-ext-code-snippet@0.65.7':
-    resolution: {integrity: sha512-YDFoWfxopeOYCqFq+LnG51kFJdfn1CZXjau8JvGujuhIrT/h23lNMO0YFJhltbUZ7TM7eHJDmxgrJ1ktYWWvlw==}
+  '@haklex/rich-ext-code-snippet@0.67.1':
+    resolution: {integrity: sha512-Yn0d10zI8OGJ0N1m3Q58ZltUvaohbkqq0SMTuaSf8jWIslIc8TkSJxn5dUGNHgtjrx2vHvdrcTHpew6pbhOmtQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
 
-  '@haklex/rich-ext-dynamic@0.65.7':
-    resolution: {integrity: sha512-ZQO6BWnwYZv985KgFKVVFzbN6obbGAI3Q87iY8VJPiQEWXOXEF/o8HJKWzZ5SRdB3odXIqVVuZZHXK/sfJUIHg==}
+  '@haklex/rich-ext-dynamic@0.67.1':
+    resolution: {integrity: sha512-RuAJttyu/R0Zx2++zpprghta1Y727ZGFuddJUudJgh/ppXxtwwja8aCj0+Cq4TYUJC3oBIit8KBz8F/yuRqgBw==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
-      '@lexical/react': 0.53.0
-      lexical: 0.53.0
-      lucide-react: ^1.0.0
-      react: 19.3.1
-      react-dom: 19.3.1
-
-  '@haklex/rich-ext-embed@0.65.7':
-    resolution: {integrity: sha512-zwRZ2BJgh+6CqRwwB72pEZqQldf/7D18KQOTPtRDGYDjA9nAOozowKO1oi/hgbCntW2w5VDROirXSSDpGjUQbQ==}
-    peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-ext-gallery@0.65.7':
-    resolution: {integrity: sha512-zXcTs5uftRDnmHC5Z7qrue0dDPnyTsGsnHs68aGnTrs10jAlNxiCeDhq1MJ6tXTcV5JR1M/dDzl/ICqTEWE0Sg==}
+  '@haklex/rich-ext-embed@0.67.1':
+    resolution: {integrity: sha512-5gsVXGsXcwxhUSVL4cmirg84xgL0yn8DfieaXsJ3NvjCBKd4FmOaKiUfjS35ma6M9QfYMdljYS4JPH/i0jiyPg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
+      '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-ext-nested-doc@0.65.7':
-    resolution: {integrity: sha512-FElsg3xlLdE65Y2W8S+D/Gm4gExc93FG/RE7dDNsF6y33a0zgyhKGTo+MGR4d0q5NbzK6ztyrm0jmJDkhrlcug==}
+  '@haklex/rich-ext-gallery@0.67.1':
+    resolution: {integrity: sha512-M//bXLQ1uZcxpBlLrR2IHgJ2kU0chbUK6txb7MTShtNZ9DG/JwVGGpui7cxQhsBCqLHTwsG01w70N3PJcqr+fA==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
+      lexical: 0.53.0
+      lucide-react: ^1.0.0
+      react: 19.3.1
+      react-dom: 19.3.1
+
+  '@haklex/rich-ext-nested-doc@0.67.1':
+    resolution: {integrity: sha512-H00eujXVLHtStKMHSpqn5zL7qLihKObV9LjaRBfytcUtXAz7e16KVJtlZHLJHV6clXidEiObLs26pxhyOSAD+g==}
+    peerDependencies:
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/markdown': 0.53.0
       '@lexical/react': 0.53.0
       lexical: 0.53.0
@@ -2941,33 +2941,33 @@ packages:
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-ext-poll@0.65.7':
-    resolution: {integrity: sha512-VG7+1BCQhoAJ2UCxHuw6Jp0Im9cQMUKFu3fcTiZSSWVawCgXGXgx51Tjfw31/boWv1edwZ1TeKvCOyYvy/uvAw==}
+  '@haklex/rich-ext-poll@0.67.1':
+    resolution: {integrity: sha512-Sg+xt06wSALPDoGe/UgMdPl9/SWpYsKfHTe0g6SUHDZ/yw60NaGu4VGqVJQcMeCF8rXaoKrSWs2Qppc22CPfxA==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
 
-  '@haklex/rich-ext-steps@0.65.7':
-    resolution: {integrity: sha512-APX5ivlugDo+WX0DeHW3UK9RP1bpHk2Eiq51mgtcBE0zrEJx8ApK2N6Vy8sCqS4TPSSBPqXS05qe+++GHcErXA==}
+  '@haklex/rich-ext-steps@0.67.1':
+    resolution: {integrity: sha512-el2Ou+hN94Qrthaxq+oEvS4kp/I/YjTOxg59aUw8wysR4vx4oUKbuLymD7ZwKeim1IK13iKVRIpHcJq0pjWcCg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
 
-  '@haklex/rich-ext-whiteboard@0.65.7':
-    resolution: {integrity: sha512-1xbq2kWEmU6KyIISjSHZ7LO1fR2n9jlL9vKNMMuaajFwMyyt7vL/nzEX954TTOEST37Wlmh31dsBWT/q5vSrfQ==}
+  '@haklex/rich-ext-whiteboard@0.67.1':
+    resolution: {integrity: sha512-+sdmXRHeyon+U6k322jC06VKfxb7IR5PLvqGPvRjJi6+6Kz9N3HbMwzzcC/tEVjv+PpBvpJPoFqCTuYgjIEMFg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/link': 0.53.0
       '@lexical/list': 0.53.0
       '@lexical/react': 0.53.0
@@ -2983,23 +2983,23 @@ packages:
     peerDependencies:
       lexical: 0.53.0
 
-  '@haklex/rich-headless@0.65.7':
-    resolution: {integrity: sha512-sQjS2fahQ0swjGqXziG4u4LB1NOyT6TdmnglXaS9b7TpegGuz8HTjk+Sa7RGzyy5bYwdtATu2ObOR9DcmtPxQA==}
+  '@haklex/rich-headless@0.67.1':
+    resolution: {integrity: sha512-b/FRRAyqK5hnjL1oajgPENQSW4jO1YzuVBK/HbMhqjVBlOtSLXrXKDf0nuMdyJ27cl52yU2H/4zGTcKNt2mDGw==}
     peerDependencies:
       lexical: 0.53.0
 
   '@haklex/rich-litexml@0.33.0':
     resolution: {integrity: sha512-NThXADGCzy2a89BRAVipZye6aStWupYqK25wr+QFTwZ3lTZnEKBXAkad5P9ouasxblHt23USLMATCXVJSrG++w==}
 
-  '@haklex/rich-litexml@0.65.7':
-    resolution: {integrity: sha512-48xP9sE1e9pvUYIXArfuAEvK/5KC77x18ehxdXupR401A8CZAnPfkbrSR+qLmGCHxQXeDhKa3mrSFXc5BGFkzA==}
+  '@haklex/rich-litexml@0.67.1':
+    resolution: {integrity: sha512-mEPppiKgsigzGRTSl9/67SDna8bpsp3rtQu000AyUXYr9HD3E2rEk1uKKIbEZ2kBOUrQK1kiftohZ6YMP7iqBw==}
 
-  '@haklex/rich-plugin-slash-menu@0.65.7':
-    resolution: {integrity: sha512-IbWriiNtOiC1dfFuqg/KqFBEXh7EnJS4sPxqIgLX61yCu3AIRDLCqJ6PQXEA3mW4GD9eufGLuZJS91EsgvkUeA==}
+  '@haklex/rich-plugin-slash-menu@0.67.1':
+    resolution: {integrity: sha512-LF3760LmBNvJrfs4r4G6OZmsn0VCOnZ3SAONPR0e1KY3ZCRbQvsb6rg8KxzZzQk8TcztCJwFLxAcLWCeEp+1lQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/list': 0.53.0
       '@lexical/react': 0.53.0
       '@lexical/rich-text': 0.53.0
@@ -3010,55 +3010,55 @@ packages:
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-alert@0.65.7':
-    resolution: {integrity: sha512-Mq3z4Nu7BrQAqLiZAyXs6Lk9tkmfE6D3BGPQzHRRFWYnZEgKTQ8yytvNI31KC/FrPGQaiIvNHz1T3ZE7mbvbFw==}
+  '@haklex/rich-renderer-alert@0.67.1':
+    resolution: {integrity: sha512-TLHlo3dnJmq47xpek62cqjy5HnNYCDjzX1BFTkg2aBPAHzQva7Hn3sEGpeD4FBv2nHIW7mf69NzieRDr8YwbTQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-banner@0.65.7':
-    resolution: {integrity: sha512-ZnhJjE9q+A+7fhpXC+fLhVM9F6QUZ2UW7m8IQtUvVkvOEuBmhzNmf2hctxEhr0UYPL2IvjXLbRrxvp7pu6lEbA==}
+  '@haklex/rich-renderer-banner@0.67.1':
+    resolution: {integrity: sha512-K7LsLXQ3GYB/ZEy7fJ0SQ2YfYJtbQ4pcAl0cTWnHuWeN/op49RBnt99Yktv52Ixea0K67H50eA2lCEOQZiFywQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-codeblock@0.65.7':
-    resolution: {integrity: sha512-1sr/Wj9YtB/bwPx5ovAexzy1wSAk5NPlbW0kvek7OOrnJlvP2aG6LUpUJwsw/efq/93RLYvaGf0HrVJySHmhdw==}
+  '@haklex/rich-renderer-codeblock@0.67.1':
+    resolution: {integrity: sha512-4d6RThO4mC++4a5IfmALVix4gJ29a6Gz0SpzEOnkIwID3DaXin8hQ9OUqBjZQpQPWUHuYQHHufZpT/7Ylz9qzQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-file@0.65.7':
-    resolution: {integrity: sha512-Zts6mTj9GiVUEM/hfSu9m3LPJb2szdvqinPCwOeEfS4UE4B90sUFvTmHitRfEqGjTEZemxd5HIttDTP/Wf2NGw==}
+  '@haklex/rich-renderer-file@0.67.1':
+    resolution: {integrity: sha512-ZP5UccETQs2vuL6Zp9+9qUP2B4WvrqM/cslUO+0oXbP7QrGMrzbtbtjUz5rndQSSpn9zRcJBD3+4MpvYScYS1w==}
     peerDependencies:
       '@base-ui/react': '>=1.5.0'
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-image@0.65.7':
-    resolution: {integrity: sha512-+qLmna6siJQ3I9ug7IQLvWBJ5rRvC7WhAlCcR5gvYUk4lHb8n0XmeXVJHKuxlo5wnMdzF9+KihEQhJS6glWnwA==}
+  '@haklex/rich-renderer-image@0.67.1':
+    resolution: {integrity: sha512-Aj94zcIkUeZKpSqCfCSSGtIOKMND0Oji4oYAoT1WYhuv/uB2As2+Z7940c2og1wBRPCqfMlqhAqsKOibgMXADQ==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       jotai: '>=2'
       lexical: 0.53.0
@@ -3066,12 +3066,12 @@ packages:
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-katex@0.65.7':
-    resolution: {integrity: sha512-ri2KEPRqE2lTMJ+8V3Y/UcE0x3cky7zrk1Ojwm8IwwIXSuCSJu1sHIM0aqP0D5gRLpsZL67aN2RWt+x25wh8uQ==}
+  '@haklex/rich-renderer-katex@0.67.1':
+    resolution: {integrity: sha512-1gaxXWy9ck64Jq5Xb3IvGaWueOCjEeybMiYbfYnORjaMQYQzNRr8+iRFy6KvBh/Ef69/7RKivOKzBXIIR2uKAg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       katex: '>=0.16.0'
       lexical: 0.53.0
@@ -3082,12 +3082,12 @@ packages:
       katex:
         optional: true
 
-  '@haklex/rich-renderer-linkcard@0.65.7':
-    resolution: {integrity: sha512-JofMaxjdDN5hEBI7ExisQKDIsP9RMc9pc0l8szmlZgyotkjhAbwDoDHME9q4uQfX0Ab9gdrvFWkdX/z8dwFj0Q==}
+  '@haklex/rich-renderer-linkcard@0.67.1':
+    resolution: {integrity: sha512-qy9efEmAHJkMVKxoK6T7+GJT2oOUtqtG+U/oeEmblytXxb8QTZ/h8RPc4mJQuB+narPije7SbxDXtJgTNgtupg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/link': 0.53.0
       '@lexical/react': 0.53.0
       lexical: 0.53.0
@@ -3095,51 +3095,51 @@ packages:
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-mention@0.65.7':
-    resolution: {integrity: sha512-1QNmuh6TkaDKAMftS920HKq6lcnUBuwm4CaG4fGKS+Hkg21+xTVccZWwBX+Krw+26389eHE21Twczh17Gp7PSQ==}
+  '@haklex/rich-renderer-mention@0.67.1':
+    resolution: {integrity: sha512-Q2yX0FCufnHsxdNKHKNd7O7djZ3FZX0PbposFUGd3F2iI4fiOMFBhxQs/m8j0oT9VstPanK9llhHRq7C30U+Wg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-mermaid@0.65.7':
-    resolution: {integrity: sha512-mkUunCF8wJbGuG6Wnybh+RlrpKHn5VFSvYMGf/6QNZuLzlgOEnYpWAqibjpxtRFw4OTWe+7EWMvms2S9VW4ygA==}
+  '@haklex/rich-renderer-mermaid@0.67.1':
+    resolution: {integrity: sha512-pEvLXJl7sgZDVAjhGe79ZxGNrkq0DXWLnrlmojXEYFDtM7WWCpuBVFeDYov8kX4/mT0qwVYrW+vUnnzQOd+mwg==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-ruby@0.65.7':
-    resolution: {integrity: sha512-iX9X5rsvSerdo0XCUhPpiW6DPuVTyr1u7kYQH9hGUl+YSjNi6ntcrdRvSVtBti+pWgPNFdwrxH1idpcyJX476A==}
+  '@haklex/rich-renderer-ruby@0.67.1':
+    resolution: {integrity: sha512-BuI763NCmSEW0o/q0oI5k2OOWvqH48SUwJgWpLO1qOVLTn0NOQ2d2l7yg+7CHFvUDId72MNUMtBo0kq7gmnwxA==}
     peerDependencies:
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-renderer-video@0.65.7':
-    resolution: {integrity: sha512-KPvRUeE7hh9GQkLnBxmt9YM4uC+MNFYsnbeMlrkqkbMy625pqva4nl+8K2p+KuEe7dCqn1MFODQrOBymry7+Kw==}
+  '@haklex/rich-renderer-video@0.67.1':
+    resolution: {integrity: sha512-+tIayW8koMMlc14SnDUrcsMHjMBz01ROuJDusPW2f++GJy7bOBBt4loOyJWsaXqsy2M2rZhHu6askvGebAjXAg==}
     peerDependencies:
       '@base-ui/react': '>=1.5.0'
-      '@haklex/rich-editor': ^0.65.7
-      '@haklex/rich-editor-ui': ^0.65.7
-      '@haklex/rich-style-token': ^0.65.7
+      '@haklex/rich-editor': ^0.67.1
+      '@haklex/rich-editor-ui': ^0.67.1
+      '@haklex/rich-style-token': ^0.67.1
       '@lexical/react': 0.53.0
       lexical: 0.53.0
       lucide-react: ^1.0.0
       react: 19.3.1
       react-dom: 19.3.1
 
-  '@haklex/rich-style-token@0.65.7':
-    resolution: {integrity: sha512-8a0p5xfXN1HtY/FjmIruxroU1iNArzDyf2BppTNEQEAmP5pmY5olx6sJza5zUabTHk7dRJV8Gbpjue9rCQLZnw==}
+  '@haklex/rich-style-token@0.67.1':
+    resolution: {integrity: sha512-TVsL81ocneBY4ETGMTPa4eDLM1GGoldkKLIimpcDA41exJlDeEpFhG6E75Hm2srGidK4z3azggioNXnMTxwSmQ==}
     peerDependencies:
       react: 19.3.1
 
@@ -11266,7 +11266,7 @@ snapshots:
     dependencies:
       '@formatjs/fast-memoize': 3.1.2
 
-  '@haklex/cm-editor@0.65.7':
+  '@haklex/cm-editor@0.67.1':
     dependencies:
       '@codemirror/language': 6.13.1
       '@codemirror/language-data': 6.5.2
@@ -11274,32 +11274,32 @@ snapshots:
       '@codemirror/theme-one-dark': 6.1.3
       '@codemirror/view': 6.43.15
 
-  '@haklex/rich-compose@0.65.7(b36724792a22d6b27b9c1a2943785db6)':
+  '@haklex/rich-compose@0.67.1(2a1ba0ae8876abbc3c415a9c44f50362)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-ext-chart': 0.65.7(ef5ae06c0f06037f8cb45ace4f07c6d2)
-      '@haklex/rich-ext-chat': 0.65.7(422619fb18619e56ef5a8793c35fc5cf)
-      '@haklex/rich-ext-code-snippet': 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
-      '@haklex/rich-ext-embed': 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
-      '@haklex/rich-ext-gallery': 0.65.7(aadb1c7d09e914e618f18604fcf42ec2)
-      '@haklex/rich-ext-nested-doc': 0.65.7(9c5b1902ea2f783358c3db118503ee48)
-      '@haklex/rich-ext-poll': 0.65.7(7f1781e16d4bc7a1016c90032e2fe955)
-      '@haklex/rich-ext-steps': 0.65.7(5f56d2cf713750ca416fcfb04ec68316)
-      '@haklex/rich-ext-whiteboard': 0.65.7(3e67e7a8aef121901de4065df7ef7d2c)
-      '@haklex/rich-litexml': 0.65.7
-      '@haklex/rich-plugin-slash-menu': 0.65.7(bfe6fc7f9f8a6acb277f664caa51079d)
-      '@haklex/rich-renderer-alert': 0.65.7(8c1eed68e752d43070e47de2b2c79ac9)
-      '@haklex/rich-renderer-banner': 0.65.7(8c1eed68e752d43070e47de2b2c79ac9)
-      '@haklex/rich-renderer-codeblock': 0.65.7(8c1eed68e752d43070e47de2b2c79ac9)
-      '@haklex/rich-renderer-file': 0.65.7(d7a946dedf1d0cb56958bd2d9edab9ac)
-      '@haklex/rich-renderer-image': 0.65.7(32ad1fbdbdddcc4a57ac9c3e61a61e22)
-      '@haklex/rich-renderer-katex': 0.65.7(fc8a75b99046a86dd133b4a69081ab83)
-      '@haklex/rich-renderer-linkcard': 0.65.7(b39bf33d4665990d57f456717dd014bf)
-      '@haklex/rich-renderer-mention': 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
-      '@haklex/rich-renderer-mermaid': 0.65.7(8c1eed68e752d43070e47de2b2c79ac9)
-      '@haklex/rich-renderer-ruby': 0.65.7(5c3ce1cba81e3a6221ce1aa6f4febcf1)
-      '@haklex/rich-renderer-video': 0.65.7(d7a946dedf1d0cb56958bd2d9edab9ac)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-ext-chart': 0.67.1(8cb389442ba7ee773c98100efe30bf8e)
+      '@haklex/rich-ext-chat': 0.67.1(fad49312bf2c7f0254c2da176aa99477)
+      '@haklex/rich-ext-code-snippet': 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
+      '@haklex/rich-ext-embed': 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
+      '@haklex/rich-ext-gallery': 0.67.1(dd923d224855c5c45dd6c5b9c97eca58)
+      '@haklex/rich-ext-nested-doc': 0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)
+      '@haklex/rich-ext-poll': 0.67.1(58c618cf5336db802a48b89006fdcec6)
+      '@haklex/rich-ext-steps': 0.67.1(177929180f2bf08d82196c3d41228b86)
+      '@haklex/rich-ext-whiteboard': 0.67.1(950c31174f6c2bb68ffa13e4b25655d0)
+      '@haklex/rich-litexml': 0.67.1
+      '@haklex/rich-plugin-slash-menu': 0.67.1(f7fae5c5ff458dd8b284981b21839bac)
+      '@haklex/rich-renderer-alert': 0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)
+      '@haklex/rich-renderer-banner': 0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)
+      '@haklex/rich-renderer-codeblock': 0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)
+      '@haklex/rich-renderer-file': 0.67.1(7f92d0598ab7ef55534a6efb29937055)
+      '@haklex/rich-renderer-image': 0.67.1(97e9cbd8bd0f05f10c31c0eb1f7e60ca)
+      '@haklex/rich-renderer-katex': 0.67.1(6f024c75bf82413c9ed2035090977b93)
+      '@haklex/rich-renderer-linkcard': 0.67.1(f4e315500c877b04a24aa741b17b896f)
+      '@haklex/rich-renderer-mention': 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
+      '@haklex/rich-renderer-mermaid': 0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)
+      '@haklex/rich-renderer-ruby': 0.67.1(8cebf2ebd124f88571231e02e5a590f0)
+      '@haklex/rich-renderer-video': 0.67.1(7f92d0598ab7ef55534a6efb29937055)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/headless': 0.53.0
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
@@ -11307,7 +11307,7 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
     optionalDependencies:
-      '@haklex/rich-ext-dynamic': 0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)
+      '@haklex/rich-ext-dynamic': 0.67.1(0961f7cbad20aa273ab94ea277c9579a)
     transitivePeerDependencies:
       - '@base-ui/react'
       - '@haklex/rich-editor-ui'
@@ -11325,15 +11325,15 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@haklex/rich-dynamic-protocol@0.65.7(275a683f8a4cdca448940810a4f343e6)':
+  '@haklex/rich-dynamic-protocol@0.67.1(275a683f8a4cdca448940810a4f343e6)':
     optionalDependencies:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-editor-ui@0.65.7(e36f62cb333272d66a45cd44d7b1abcf)':
+  '@haklex/rich-editor-ui@0.67.1(e36f62cb333272d66a45cd44d7b1abcf)':
     dependencies:
       '@base-ui/react': 1.9.0(7992afa551d93b6a7b648249b85a9b6a)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@pierre/highlights': 0.2.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
@@ -11342,12 +11342,12 @@ snapshots:
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
 
-  '@haklex/rich-editor@0.65.7(99f85382afd0739219f72a6d185c9a58)':
+  '@haklex/rich-editor@0.67.1(99f85382afd0739219f72a6d185c9a58)':
     dependencies:
       '@base-ui/react': 1.9.0(7992afa551d93b6a7b648249b85a9b6a)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-headless': 0.65.7(lexical@0.53.0)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-headless': 0.67.1(lexical@0.53.0)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/code-core': 0.53.0
       '@lexical/extension': 0.53.0
       '@lexical/link': 0.53.0
@@ -11365,11 +11365,11 @@ snapshots:
     optionalDependencies:
       katex: 0.19.0
 
-  '@haklex/rich-ext-chart@0.65.7(ef5ae06c0f06037f8cb45ace4f07c6d2)':
+  '@haklex/rich-ext-chart@0.67.1(8cb389442ba7ee773c98100efe30bf8e)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       '@visx/scale': 4.0.0
       '@visx/shape': 4.0.0(338c1594c9c161dfcb77846e8ecf76e5)
@@ -11380,11 +11380,11 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@haklex/rich-ext-chat@0.65.7(422619fb18619e56ef5a8793c35fc5cf)':
+  '@haklex/rich-ext-chat@0.67.1(fad49312bf2c7f0254c2da176aa99477)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
@@ -11395,7 +11395,7 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@haklex/rich-ext-code-snippet@0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)':
+  '@haklex/rich-ext-code-snippet@0.67.1(0961f7cbad20aa273ab94ea277c9579a)':
     dependencies:
       '@codemirror/commands': 6.11.1
       '@codemirror/state': 6.7.6
@@ -11403,12 +11403,12 @@ snapshots:
       '@dnd-kit/core': 6.3.1(275a683f8a4cdca448940810a4f343e6)
       '@dnd-kit/sortable': 10.0.0(8e842f0a7527fc1e9054a3c3df3d5039)
       '@dnd-kit/utilities': 3.2.2(react@19.3.1)
-      '@haklex/cm-editor': 0.65.7
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-headless': 0.65.7(lexical@0.53.0)
-      '@haklex/rich-renderer-codeblock': 0.65.7(8c1eed68e752d43070e47de2b2c79ac9)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/cm-editor': 0.67.1
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-headless': 0.67.1(lexical@0.53.0)
+      '@haklex/rich-renderer-codeblock': 0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
@@ -11416,23 +11416,23 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@haklex/rich-ext-dynamic@0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)':
+  '@haklex/rich-ext-dynamic@0.67.1(0961f7cbad20aa273ab94ea277c9579a)':
     dependencies:
-      '@haklex/rich-dynamic-protocol': 0.65.7(275a683f8a4cdca448940810a4f343e6)
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-dynamic-protocol': 0.67.1(275a683f8a4cdca448940810a4f343e6)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-ext-embed@0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)':
+  '@haklex/rich-ext-embed@0.67.1(0961f7cbad20aa273ab94ea277c9579a)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@icons-pack/react-simple-icons': 13.15.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
@@ -11441,25 +11441,25 @@ snapshots:
       react-dom: 19.3.1(react@19.3.1)
       react-tweet: '@innei/react-tweet@4.0.0(275a683f8a4cdca448940810a4f343e6)'
 
-  '@haklex/rich-ext-gallery@0.65.7(aadb1c7d09e914e618f18604fcf42ec2)':
+  '@haklex/rich-ext-gallery@0.67.1(dd923d224855c5c45dd6c5b9c97eca58)':
     dependencies:
       '@dnd-kit/core': 6.3.1(275a683f8a4cdca448940810a4f343e6)
       '@dnd-kit/sortable': 10.0.0(8e842f0a7527fc1e9054a3c3df3d5039)
       '@dnd-kit/utilities': 3.2.2(react@19.3.1)
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
       react-intersection-observer: 11.0.1(275a683f8a4cdca448940810a4f343e6)
 
-  '@haklex/rich-ext-nested-doc@0.65.7(9c5b1902ea2f783358c3db118503ee48)':
+  '@haklex/rich-ext-nested-doc@0.67.1(3186cbd03ffcdee2da19aad1bf616ce6)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/markdown': 0.53.0
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
@@ -11467,34 +11467,34 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-ext-poll@0.65.7(7f1781e16d4bc7a1016c90032e2fe955)':
+  '@haklex/rich-ext-poll@0.67.1(58c618cf5336db802a48b89006fdcec6)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       nanoid: 6.0.2
       react: 19.3.1
 
-  '@haklex/rich-ext-steps@0.65.7(5f56d2cf713750ca416fcfb04ec68316)':
+  '@haklex/rich-ext-steps@0.67.1(177929180f2bf08d82196c3d41228b86)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       nanoid: 6.0.2
       react: 19.3.1
 
-  '@haklex/rich-ext-whiteboard@0.65.7(3e67e7a8aef121901de4065df7ef7d2c)':
+  '@haklex/rich-ext-whiteboard@0.67.1(950c31174f6c2bb68ffa13e4b25655d0)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-headless': 0.65.7(lexical@0.53.0)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-headless': 0.67.1(lexical@0.53.0)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/link': 0.53.0
       '@lexical/list': 0.53.0
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
@@ -11519,7 +11519,7 @@ snapshots:
       '@lexical/table': 0.53.0
       lexical: 0.53.0
 
-  '@haklex/rich-headless@0.65.7(lexical@0.53.0)':
+  '@haklex/rich-headless@0.67.1(lexical@0.53.0)':
     dependencies:
       '@lexical/code-core': 0.53.0
       '@lexical/extension': 0.53.0
@@ -11538,7 +11538,7 @@ snapshots:
     transitivePeerDependencies:
       - canvas
 
-  '@haklex/rich-litexml@0.65.7':
+  '@haklex/rich-litexml@0.67.1':
     dependencies:
       lexical: 0.53.0
       linkedom: 0.18.14
@@ -11546,12 +11546,12 @@ snapshots:
     transitivePeerDependencies:
       - canvas
 
-  '@haklex/rich-plugin-slash-menu@0.65.7(bfe6fc7f9f8a6acb277f664caa51079d)':
+  '@haklex/rich-plugin-slash-menu@0.67.1(f7fae5c5ff458dd8b284981b21839bac)':
     dependencies:
       '@floating-ui/react-dom': 2.1.9(275a683f8a4cdca448940810a4f343e6)
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/list': 0.53.0
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       '@lexical/rich-text': 0.53.0
@@ -11562,56 +11562,56 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-alert@0.65.7(8c1eed68e752d43070e47de2b2c79ac9)':
+  '@haklex/rich-renderer-alert@0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-banner@0.65.7(8c1eed68e752d43070e47de2b2c79ac9)':
+  '@haklex/rich-renderer-banner@0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-codeblock@0.65.7(8c1eed68e752d43070e47de2b2c79ac9)':
+  '@haklex/rich-renderer-codeblock@0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)':
     dependencies:
       '@codemirror/commands': 6.11.1
       '@codemirror/state': 6.7.6
       '@codemirror/view': 6.43.15
-      '@haklex/cm-editor': 0.65.7
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/cm-editor': 0.67.1
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@iconify-json/material-icon-theme': 1.2.75
       '@iconify/utils': 3.1.7
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-file@0.65.7(d7a946dedf1d0cb56958bd2d9edab9ac)':
+  '@haklex/rich-renderer-file@0.67.1(7f92d0598ab7ef55534a6efb29937055)':
     dependencies:
       '@base-ui/react': 1.9.0(7992afa551d93b6a7b648249b85a9b6a)
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-image@0.65.7(32ad1fbdbdddcc4a57ac9c3e61a61e22)':
+  '@haklex/rich-renderer-image@0.67.1(97e9cbd8bd0f05f10c31c0eb1f7e60ca)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       jotai: 3.0.1(338c1594c9c161dfcb77846e8ecf76e5)
       lexical: 0.53.0
@@ -11619,11 +11619,11 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-katex@0.65.7(fc8a75b99046a86dd133b4a69081ab83)':
+  '@haklex/rich-renderer-katex@0.67.1(6f024c75bf82413c9ed2035090977b93)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
@@ -11632,11 +11632,11 @@ snapshots:
     optionalDependencies:
       katex: 0.19.0
 
-  '@haklex/rich-renderer-linkcard@0.65.7(b39bf33d4665990d57f456717dd014bf)':
+  '@haklex/rich-renderer-linkcard@0.67.1(f4e315500c877b04a24aa741b17b896f)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/link': 0.53.0
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
@@ -11645,11 +11645,11 @@ snapshots:
       react-dom: 19.3.1(react@19.3.1)
       react-intersection-observer: 11.0.1(275a683f8a4cdca448940810a4f343e6)
 
-  '@haklex/rich-renderer-mention@0.65.7(60320fec7c69ccbd3ecf9dbfcd6eb911)':
+  '@haklex/rich-renderer-mention@0.67.1(0961f7cbad20aa273ab94ea277c9579a)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@icons-pack/react-simple-icons': 13.15.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
@@ -11657,37 +11657,37 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-mermaid@0.65.7(8c1eed68e752d43070e47de2b2c79ac9)':
+  '@haklex/rich-renderer-mermaid@0.67.1(3dc8a6c245600fcf44c8ffa866562d1a)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       pele: 1.7.0
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
       react-zoom-pan-pinch: 4.2.0(275a683f8a4cdca448940810a4f343e6)
 
-  '@haklex/rich-renderer-ruby@0.65.7(5c3ce1cba81e3a6221ce1aa6f4febcf1)':
+  '@haklex/rich-renderer-ruby@0.67.1(8cebf2ebd124f88571231e02e5a590f0)':
     dependencies:
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-renderer-video@0.65.7(d7a946dedf1d0cb56958bd2d9edab9ac)':
+  '@haklex/rich-renderer-video@0.67.1(7f92d0598ab7ef55534a6efb29937055)':
     dependencies:
       '@base-ui/react': 1.9.0(7992afa551d93b6a7b648249b85a9b6a)
-      '@haklex/rich-editor': 0.65.7(99f85382afd0739219f72a6d185c9a58)
-      '@haklex/rich-editor-ui': 0.65.7(e36f62cb333272d66a45cd44d7b1abcf)
-      '@haklex/rich-style-token': 0.65.7(react@19.3.1)
+      '@haklex/rich-editor': 0.67.1(99f85382afd0739219f72a6d185c9a58)
+      '@haklex/rich-editor-ui': 0.67.1(e36f62cb333272d66a45cd44d7b1abcf)
+      '@haklex/rich-style-token': 0.67.1(react@19.3.1)
       '@lexical/react': 0.53.0(275a683f8a4cdca448940810a4f343e6)
       lexical: 0.53.0
       lucide-react: 1.59.0(338c1594c9c161dfcb77846e8ecf76e5)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@haklex/rich-style-token@0.65.7(react@19.3.1)':
+  '@haklex/rich-style-token@0.67.1(react@19.3.1)':
     dependencies:
       react: 19.3.1
 
